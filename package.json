@@ -1,0 +1,20 @@
+{
+  "name": "warsawjs-blog",
+  "version": "1.0.0",
+  "description": "Tech blog based on WarsawJS branding collecting links to Medium posts",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "keywords": [
+    "warsawjs",
+    "blog",
+    "javascript",
+    "medium"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
