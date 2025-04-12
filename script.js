@@ -157,6 +157,12 @@ function initBlog() {
   let currentPosts = [...mockPosts];
   let activeAuthorFilter = null;
 
+  // Only proceed if we found the posts grid
+  if (!postsGrid) {
+    console.error('Posts grid element not found');
+    return;
+  }
+
   // Function to render posts
   function renderPosts(posts) {
     postsGrid.innerHTML = posts.length
@@ -166,10 +172,40 @@ function initBlog() {
     // Add structured data for SEO
     addStructuredData(posts);
     
-    // Scroll to posts if filtering by author
-    if (activeAuthorFilter) {
-      postsGrid.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Add click events to author names in posts
+    document.querySelectorAll('.post-author-name').forEach(authorElement => {
+      if (authorElement) {
+        authorElement.addEventListener('click', function() {
+          const nameElement = this.querySelector('meta[itemprop="name"]');
+          if (nameElement) {
+            const authorName = nameElement.getAttribute('content');
+            filterByAuthor(authorName);
+          }
+        });
+      }
+    });
+  }
+
+  // Set up author card click events
+  const authorCards = document.querySelectorAll('.author-card');
+  if (authorCards && authorCards.length > 0) {
+    authorCards.forEach(card => {
+      if (card) {
+        card.addEventListener('click', function(e) {
+          // Don't trigger if clicking the speaker-link
+          if (e.target.closest('.speaker-link')) {
+            return;
+          }
+          
+          const authorName = this.getAttribute('data-author');
+          if (authorName) {
+            filterByAuthor(authorName);
+          }
+        });
+      }
+    });
+  } else {
+    console.warn('No author cards found in the document');
   }
 
   // Initial render
@@ -177,18 +213,31 @@ function initBlog() {
 
   // Filter by author function
   window.filterByAuthor = function(authorName) {
-    // Reset search input
-    searchInput.value = '';
+    if (!authorName) {
+      console.error('No author name provided to filter');
+      return;
+    }
+    
+    console.log(`Filtering by author: ${authorName}`);
+    
+    // If using search input (which is now removed)
+    if (searchInput) {
+      searchInput.value = '';
+    }
     
     // If clicking the same author again, clear the filter
     if (activeAuthorFilter === authorName) {
+      console.log('Clearing active filter (same author clicked again)');
       activeAuthorFilter = null;
       renderPosts(mockPosts);
       
       // Remove active class from all author cards
-      document.querySelectorAll('.author-card').forEach(card => {
-        card.classList.remove('active');
-      });
+      const authorCards = document.querySelectorAll('.author-card');
+      if (authorCards && authorCards.length > 0) {
+        authorCards.forEach(card => {
+          if (card) card.classList.remove('active');
+        });
+      }
       
       // Remove filter indicator if it exists
       const filterIndicator = document.getElementById('filter-indicator');
@@ -202,18 +251,45 @@ function initBlog() {
     activeAuthorFilter = authorName;
     
     // Highlight the active author card
-    document.querySelectorAll('.author-card').forEach(card => {
-      const cardAuthor = card.querySelector('.author-avatar').getAttribute('data-author');
-      if (cardAuthor === authorName) {
-        card.classList.add('active');
-      } else {
-        card.classList.remove('active');
+    const authorCards = document.querySelectorAll('.author-card');
+    if (authorCards && authorCards.length > 0) {
+      authorCards.forEach(card => {
+        if (!card) return;
+        
+        const cardAuthor = card.getAttribute('data-author');
+        if (cardAuthor === authorName) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+    }
+    
+    // Find posts by this author (handle different name formats)
+    const filteredPosts = mockPosts.filter(post => {
+      const postAuthor = post.author?.name || '';
+      const match = (
+        postAuthor === authorName || 
+        // Handle cases where the order of names is different
+        (authorName === "Chojnacki Krzysiek" && postAuthor === "Krzysiek Chojnacki") ||
+        (authorName === "Krzysiek Chojnacki" && postAuthor === "Chojnacki Krzysiek") ||
+        // Handle 'Mateusz (mat3e)' vs 'Mateusz (mat3e)'
+        (authorName.includes("Mateusz") && postAuthor.includes("Mateusz"))
+      );
+      
+      if (match) {
+        console.log(`Match found: "${postAuthor}" matches "${authorName}"`);
       }
+      
+      return match;
     });
     
-    const filteredPosts = mockPosts.filter(post => 
-      post.author?.name === authorName
-    );
+    console.log(`Found ${filteredPosts.length} posts for author ${authorName}`);
+    
+    if (!postsGrid) {
+      console.error('Posts grid element not found');
+      return;
+    }
     
     renderPosts(filteredPosts);
     
@@ -223,7 +299,7 @@ function initBlog() {
       filterIndicator = document.createElement('div');
       filterIndicator.id = 'filter-indicator';
       filterIndicator.className = 'filter-indicator';
-      postsGrid.insertAdjacentElement('beforebegin', filterIndicator);
+      postsGrid.insertAdjacentElement('afterend', filterIndicator);
     }
     
     filterIndicator.innerHTML = `
@@ -232,40 +308,42 @@ function initBlog() {
     `;
   };
 
-  // Search functionality
-  searchInput.addEventListener('input', (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-    
-    // Reset author filter when searching
-    if (activeAuthorFilter && searchTerm) {
-      activeAuthorFilter = null;
-      document.querySelectorAll('.author-card').forEach(card => {
-        card.classList.remove('active');
-      });
+  // Search functionality (only if search input exists)
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
       
-      // Remove filter indicator if it exists
-      const filterIndicator = document.getElementById('filter-indicator');
-      if (filterIndicator) {
-        filterIndicator.remove();
+      // Reset author filter when searching
+      if (activeAuthorFilter && searchTerm) {
+        activeAuthorFilter = null;
+        document.querySelectorAll('.author-card').forEach(card => {
+          card.classList.remove('active');
+        });
+        
+        // Remove filter indicator if it exists
+        const filterIndicator = document.getElementById('filter-indicator');
+        if (filterIndicator) {
+          filterIndicator.remove();
+        }
       }
-    }
-    
-    if (!searchTerm) {
-      renderPosts(mockPosts);
-      return;
-    }
-    
-    const filteredPosts = mockPosts.filter(post => 
-      post.title.toLowerCase().includes(searchTerm) ||
-      post.description.toLowerCase().includes(searchTerm) ||
-      (post.categories && post.categories.some(category => 
-        category.toLowerCase().includes(searchTerm)
-      )) ||
-      (post.author?.name && post.author.name.toLowerCase().includes(searchTerm))
-    );
-    
-    renderPosts(filteredPosts);
-  });
+      
+      if (!searchTerm) {
+        renderPosts(mockPosts);
+        return;
+      }
+      
+      const filteredPosts = mockPosts.filter(post => 
+        post.title.toLowerCase().includes(searchTerm) ||
+        post.description.toLowerCase().includes(searchTerm) ||
+        (post.categories && post.categories.some(category => 
+          category.toLowerCase().includes(searchTerm)
+        )) ||
+        (post.author?.name && post.author.name.toLowerCase().includes(searchTerm))
+      );
+      
+      renderPosts(filteredPosts);
+    });
+  }
 
   // Add structured data for SEO
   function addStructuredData(posts) {
