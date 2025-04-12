@@ -1,7 +1,12 @@
 :root {
-  --primary-color: #334556;
+  --background: #ffffff;
+  --foreground: #171717;
+  --warsawjs-red: #e74c3c;
+  --warsawjs-yellow: #f7ca18;
+  --warsawjs-black: #0a0a0a;
+  --primary-color: var(--warsawjs-red);
   --text-color: #ffffff;
-  --background-color: #f8f8f8;
+  --background-color: var(--background);
   --card-background: #ffffff;
   --border-color: #e0e0e0;
   --accent-color: #f0f0f0;
@@ -62,8 +67,7 @@ p {
 }
 
 .logo img {
-  margin-right: 0.5rem;
-  height: 40px;
+  height: 50px;
 }
 
 .nav ul {
@@ -100,7 +104,7 @@ p {
 }
 
 .title {
-  color: var(--primary-color);
+  color: var(--warsawjs-red);
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -129,8 +133,8 @@ p {
 
 .search-input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(51, 69, 86, 0.2);
+  border-color: var(--warsawjs-red);
+  box-shadow: 0 0 0 2px rgba(242, 38, 19, 0.2);
 }
 
 /* Blog posts grid */
@@ -185,7 +189,7 @@ p {
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-color);
+  color: var(--warsawjs-black);
 }
 
 .description {
@@ -243,7 +247,7 @@ p {
 }
 
 .footer-logo img {
-  height: 30px;
+  height: 40px;
 }
 
 .copyright {

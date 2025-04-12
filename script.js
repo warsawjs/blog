@@ -1,76 +1,88 @@
-// Mock data for Medium posts
+// Real Medium post data
 const mockPosts = [
   {
-    title: 'JavaScript Best Practices in 2025',
-    description: 'Learn about the latest best practices in JavaScript development. This article covers performance optimization, code organization, and newer language features...',
-    link: 'https://medium.com/warsawjs/javascript-best-practices-2025',
-    pubDate: '2025-04-01T12:00:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*code-image-example.jpg',
+    title: 'An Elegant Solution for Handling Errors in Express',
+    description: 'Error handling in Express applications can be tricky. This article explores an elegant pattern for centralized error handling that makes your code cleaner and more maintainable...',
+    link: 'https://medium.com/warsawjs/an-elegant-solution-for-handling-errors-in-express-27332f768c6',
+    pubDate: '2023-05-15T12:00:00Z',
+    thumbnail: 'public/images/elegant.jpeg',
     author: {
-      name: 'JavaScript Expert',
-      image: 'https://miro.medium.com/max/100/0*author-avatar.jpg'
+      name: 'Piotr Zientara',
+      image: null
     },
-    categories: ['JavaScript', 'Web Development', 'Programming']
+    categories: ['Express', 'Node.js', 'Error Handling']
   },
   {
-    title: 'Building Scalable React Applications',
-    description: 'A comprehensive guide to building large-scale React applications that scale. This article shares patterns, architecture decisions, and practical tips...',
-    link: 'https://medium.com/warsawjs/building-scalable-react-applications',
-    pubDate: '2025-03-15T14:30:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*react-image-example.jpg',
+    title: 'Bitwise Operators',
+    description: 'Dive into the world of bitwise operators in JavaScript. Learn how these low-level operators work and how they can be used to optimize your code in specific scenarios...',
+    link: 'https://medium.com/warsawjs/bitwise-operators-45e4d8b393db',
+    pubDate: '2023-04-10T14:30:00Z',
+    thumbnail: 'public/images/bitwise.jpeg',
     author: {
-      name: 'React Developer',
-      image: 'https://miro.medium.com/max/100/0*react-dev-avatar.jpg'
+      name: 'Krzysztof Łokaj',
+      image: null
     },
-    categories: ['React', 'JavaScript', 'Web Development']
+    categories: ['JavaScript', 'Bitwise Operations', 'Programming']
   },
   {
-    title: 'Mastering TypeScript: Advanced Types',
-    description: 'Dive deep into TypeScript\'s advanced type system. Learn about conditional types, mapped types, template literal types and more to build type-safe applications...',
-    link: 'https://medium.com/warsawjs/mastering-typescript-advanced-types',
-    pubDate: '2025-02-20T09:15:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*typescript-image.jpg',
+    title: 'How many AWS services do you need to host a static webpage? (1/2)',
+    description: 'Part 1 of this series explores the AWS services needed to host a static website. From S3 to CloudFront, learn the fundamentals of serverless static site hosting on AWS...',
+    link: 'https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-1-2-b811929a9436',
+    pubDate: '2023-03-20T09:15:00Z',
+    thumbnail: 'public/images/aws.jpeg',
     author: {
-      name: 'TypeScript Guru',
-      image: 'https://miro.medium.com/max/100/0*ts-guru-avatar.jpg'
+      name: 'Piotr Kowalski',
+      image: null
     },
-    categories: ['TypeScript', 'JavaScript', 'Programming']
+    categories: ['AWS', 'Static Websites', 'Cloud']
   },
   {
-    title: 'Web Performance Optimization Techniques',
-    description: 'Practical tips for improving your web application\'s performance. From bundle optimization to rendering performance, learn how to make your web apps lightning fast...',
-    link: 'https://medium.com/warsawjs/web-performance-optimization-techniques',
-    pubDate: '2025-01-10T16:45:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*performance-image.jpg',
+    title: 'How many AWS services do you need to host a static webpage? (2/2)',
+    description: 'Part 2 of the AWS static site hosting series. Discover more advanced configurations and optimizations for your static website infrastructure on AWS...',
+    link: 'https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-2-2-aa619fc99fc2',
+    pubDate: '2023-03-25T16:45:00Z',
+    thumbnail: 'public/images/aws_static.jpeg',
     author: {
-      name: 'Performance Expert',
-      image: 'https://miro.medium.com/max/100/0*perf-expert-avatar.jpg'
+      name: 'Piotr Kowalski',
+      image: null
     },
-    categories: ['Web Performance', 'JavaScript', 'Web Development']
+    categories: ['AWS', 'Static Websites', 'Cloud']
   },
   {
-    title: 'The Future of JavaScript: What\'s Coming in 2026',
-    description: 'A look at upcoming JavaScript features and browser APIs. Get prepared for the future with this overview of the JavaScript ecosystem evolution...',
-    link: 'https://medium.com/warsawjs/the-future-of-javascript-2026',
-    pubDate: '2024-12-05T11:20:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*future-js-image.jpg',
+    title: 'WarsawJS Mission Statement',
+    description: 'Learn about the mission and vision behind WarsawJS. This article outlines our commitment to the JavaScript community and our goals for fostering knowledge sharing and growth...',
+    link: 'https://medium.com/warsawjs/warsawjs-mission-statement-53fbca973a59',
+    pubDate: '2023-02-05T11:20:00Z',
+    thumbnail: 'public/images/mission.jpeg',
     author: {
-      name: 'JavaScript Futurist',
-      image: 'https://miro.medium.com/max/100/0*js-futurist-avatar.jpg'
+      name: 'Piotr Zientara',
+      image: null
     },
-    categories: ['JavaScript', 'Web Development', 'Programming']
+    categories: ['WarsawJS', 'Community', 'JavaScript']
   },
   {
-    title: 'Building a Serverless API with Node.js',
-    description: 'Learn how to create scalable, cost-effective APIs using serverless technologies. This tutorial shows you how to build a complete API without managing servers...',
-    link: 'https://medium.com/warsawjs/building-serverless-api-nodejs',
-    pubDate: '2024-11-18T13:40:00Z',
-    thumbnail: 'https://miro.medium.com/max/1200/0*serverless-image.jpg',
+    title: 'What are Template Literal Types?',
+    description: 'Explore TypeScript\'s powerful template literal types. Learn how they can help you create more precise type definitions and improve type safety in your TypeScript applications...',
+    link: 'https://medium.com/warsawjs/what-are-template-literal-types-9449717b5433',
+    pubDate: '2023-01-18T13:40:00Z',
+    thumbnail: 'public/images/types.jpeg',
     author: {
-      name: 'Serverless Developer',
-      image: 'https://miro.medium.com/max/100/0*serverless-dev-avatar.jpg'
+      name: 'Michał Miszczyszyn',
+      image: null
     },
-    categories: ['Node.js', 'Serverless', 'API Development']
+    categories: ['TypeScript', 'Template Literals', 'Type Safety']
+  },
+  {
+    title: 'Simplicity in the Spectrum: Identifying and Overcoming Overengineering',
+    description: 'This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...',
+    link: 'https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2',
+    pubDate: '2022-12-10T10:30:00Z',
+    thumbnail: 'public/images/simplicity.jpeg',
+    author: {
+      name: 'Piotr Zientara',
+      image: null
+    },
+    categories: ['Software Design', 'Best Practices', 'Simplicity']
   }
 ];
 
