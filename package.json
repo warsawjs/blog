@@ -4,7 +4,8 @@
   "description": "Tech blog based on WarsawJS branding collecting links to Medium posts",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ."
+    "start": "http-server .",
+    "build": "cp -r *.html *.css *.js *.svg public/ dist/"
   },
   "keywords": [
     "warsawjs",
