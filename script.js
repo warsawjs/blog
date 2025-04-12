@@ -7,7 +7,7 @@ const mockPosts = [
     pubDate: '2023-05-15T12:00:00Z',
     thumbnail: 'public/images/elegant.jpeg',
     author: {
-      name: 'Piotr Zientara',
+      name: 'Michał Załęcki',
       image: null
     },
     categories: ['Express', 'Node.js', 'Error Handling']
@@ -19,7 +19,7 @@ const mockPosts = [
     pubDate: '2023-04-10T14:30:00Z',
     thumbnail: 'public/images/bitwise.jpeg',
     author: {
-      name: 'Krzysztof Łokaj',
+      name: 'Yonatan Kra',
       image: null
     },
     categories: ['JavaScript', 'Bitwise Operations', 'Programming']
@@ -31,7 +31,7 @@ const mockPosts = [
     pubDate: '2023-03-20T09:15:00Z',
     thumbnail: 'public/images/aws.jpeg',
     author: {
-      name: 'Piotr Kowalski',
+      name: 'Mateusz (mat3e)',
       image: null
     },
     categories: ['AWS', 'Static Websites', 'Cloud']
@@ -43,7 +43,7 @@ const mockPosts = [
     pubDate: '2023-03-25T16:45:00Z',
     thumbnail: 'public/images/aws_static.jpeg',
     author: {
-      name: 'Piotr Kowalski',
+      name: 'Mateusz (mat3e)',
       image: null
     },
     categories: ['AWS', 'Static Websites', 'Cloud']
@@ -67,7 +67,7 @@ const mockPosts = [
     pubDate: '2023-01-18T13:40:00Z',
     thumbnail: 'public/images/types.jpeg',
     author: {
-      name: 'Michał Miszczyszyn',
+      name: 'Chojnacki Krzysiek',
       image: null
     },
     categories: ['TypeScript', 'Template Literals', 'Type Safety']
@@ -79,7 +79,7 @@ const mockPosts = [
     pubDate: '2022-12-10T10:30:00Z',
     thumbnail: 'public/images/simplicity.jpeg',
     author: {
-      name: 'Piotr Zientara',
+      name: 'Chojnacki Krzysiek',
       image: null
     },
     categories: ['Software Design', 'Best Practices', 'Simplicity']
