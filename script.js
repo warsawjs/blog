@@ -49,6 +49,18 @@ const mockPosts = [
     categories: ['AWS', 'Static Websites', 'Cloud']
   },
   {
+    title: 'Et in Arcadia ego: AI in modeling (ft. Lalaland.ai)',
+    description: 'AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...',
+    link: 'https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM',
+    pubDate: '2024-07-21T10:00:00Z',
+    thumbnail: 'public/images/lalaland.jpg',
+    author: {
+      name: 'Iga Trydulska',
+      image: null
+    },
+    categories: ['AI', 'Fashion', 'Technology', 'Ethics']
+  },
+  {
     title: 'How many AWS services do you need to host a static webpage? (2/2)',
     description: 'Part 2 of the AWS static site hosting series. Discover more advanced configurations and optimizations for your static website infrastructure on AWS...',
     link: 'https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-2-2-aa619fc99fc2',
