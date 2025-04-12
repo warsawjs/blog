@@ -203,6 +203,7 @@ function initBlog() {
   if (authorCards && authorCards.length > 0) {
     authorCards.forEach(card => {
       if (card) {
+        // Handle click events
         card.addEventListener('click', function(e) {
           // Don't trigger if clicking the speaker-link
           if (e.target.closest('.speaker-link')) {
@@ -212,6 +213,18 @@ function initBlog() {
           const authorName = this.getAttribute('data-author');
           if (authorName) {
             filterByAuthor(authorName);
+          }
+        });
+        
+        // Add keyboard support for accessibility
+        card.addEventListener('keydown', function(e) {
+          // Handle Enter or Space key
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const authorName = this.getAttribute('data-author');
+            if (authorName) {
+              filterByAuthor(authorName);
+            }
           }
         });
       }
@@ -314,10 +327,25 @@ function initBlog() {
       postsGrid.insertAdjacentElement('afterend', filterIndicator);
     }
     
+    // Check if it's a mobile device
+    const isMobile = window.innerWidth <= 480;
+    
     filterIndicator.innerHTML = `
       <p>Showing posts by <strong>${authorName}</strong></p>
-      <button onclick="filterByAuthor('${authorName}')" class="clear-filter-btn">Clear filter</button>
+      <button onclick="filterByAuthor('${authorName}')" class="clear-filter-btn">
+        ${isMobile ? 'Clear' : 'Clear filter'}
+      </button>
     `;
+    
+    // Scroll to posts grid with a small offset for mobile
+    if (isMobile) {
+      const yOffset = -20; 
+      const postsGridTop = postsGrid.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({
+        top: postsGridTop,
+        behavior: 'smooth'
+      });
+    }
   };
 
   // Search functionality (only if search input exists)

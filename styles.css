@@ -355,6 +355,15 @@ p {
 }
 
 @media (max-width: 768px) {
+  .authors-section {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+  
+  .authors-section h2 {
+    font-size: 1.5rem;
+  }
+  
   .authors-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1.25rem;
@@ -368,17 +377,53 @@ p {
   .author-card {
     padding: 1.25rem 0.75rem;
   }
+  
+  .speaker-link {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media (max-width: 480px) {
+  .authors-section {
+    border-radius: 8px;
+    padding: 1.25rem 0.5rem;
+  }
+  
+  .authors-section h2 {
+    font-size: 1.4rem;
+  }
+  
   .authors-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem 1.5rem;
+  }
+  
+  .author-avatar {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .author-card {
+    padding: 1rem 0.5rem;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 359px) {
+  .authors-grid {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: 0 auto;
   }
   
   .author-avatar {
     width: 90px;
     height: 90px;
+  }
+  
+  .author-card {
+    padding: 1.25rem 0.75rem;
   }
 }
 
@@ -475,4 +520,20 @@ p {
   background-color: var(--warsawjs-red);
   color: white;
   border-color: var(--warsawjs-red);
+}
+
+@media (max-width: 480px) {
+  .filter-indicator {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .clear-filter-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
