@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WarsawJS Blog - Latest JavaScript Articles</title>
+  <title>WarsawJS Blog - Community Articles</title>
   <meta name="description" content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community">
   <link rel="icon" href="public/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   
   <!-- SEO Meta Tags -->
@@ -17,18 +18,19 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://blog.warsawjs.com">
-  <meta property="og:title" content="WarsawJS Blog - Latest JavaScript Articles">
+  <meta property="og:url" content="https://blog.warsawjs.com/">
+  <meta property="og:title" content="WarsawJS Blog - Community Articles">
   <meta property="og:description" content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community">
+  <meta property="og:image" content="https://blog.warsawjs.com/public/images/og-image-desktop.jpeg">
+  <meta property="og:image:alt" content="WarsawJS Blog banner">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image" content="https://blog.warsawjs.com/public/images/og-image-desktop.jpeg">
   <meta property="og:site_name" content="WarsawJS Blog">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://blog.warsawjs.com">
-  <meta name="twitter:title" content="WarsawJS Blog - Latest JavaScript Articles">
+  <meta name="twitter:title" content="WarsawJS Blog - Community Articles">
   <meta name="twitter:description" content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community">
   <meta name="twitter:image" content="https://blog.warsawjs.com/public/images/og-mobile.jpeg">
   
@@ -49,13 +51,13 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
           </li>
           <li>
-            <a href="https://warsawjs.com" target="_blank">Main Site</a>
+            <a href="https://warsawjs.com" target="_blank"><i class="fas fa-globe"></i> Main Site</a>
           </li>
           <li>
-            <a href="https://medium.com/warsawjs" target="_blank">Medium</a>
+            <a href="https://medium.com/warsawjs" target="_blank"><i class="fab fa-medium"></i> Medium</a>
           </li>
         </ul>
       </nav>
@@ -73,7 +75,7 @@
     
     <!-- Authors Section -->
     <div class="authors-section">
-      <h2>Our Authors</h2>
+      <h2><span>Our Authors</span></h2>
       <div class="authors-grid" role="list">
         <div class="author-card" data-author="Michał Załęcki" role="listitem" tabindex="0" aria-label="Filter by Michał Załęcki">
           <div class="author-avatar">
@@ -81,7 +83,7 @@
           </div>
           <h3 class="author-name">Michał Załęcki</h3>
           <a href="https://warsawjs.com/speakers/michal-zalecki" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
         <div class="author-card" data-author="Yonatan Kra" role="listitem" tabindex="0" aria-label="Filter by Yonatan Kra">
@@ -90,7 +92,7 @@
           </div>
           <h3 class="author-name">Yonatan Kra</h3>
           <a href="https://warsawjs.com/speakers/yonatan-kra" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
         <div class="author-card" data-author="Iga Trydulska" role="listitem" tabindex="0" aria-label="Filter by Iga Trydulska">
@@ -99,7 +101,7 @@
           </div>
           <h3 class="author-name">Iga Trydulska</h3>
           <a href="https://warsawjs.com/speakers/iga-trydulska" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
         <div class="author-card" data-author="Piotr Zientara" role="listitem" tabindex="0" aria-label="Filter by Piotr Zientara">
@@ -108,7 +110,7 @@
           </div>
           <h3 class="author-name">Piotr Zientara</h3>
           <a href="https://warsawjs.com/speakers/piotr-zientara" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
         <div class="author-card" data-author="Chojnacki Krzysiek" role="listitem" tabindex="0" aria-label="Filter by Chojnacki Krzysiek">
@@ -117,7 +119,7 @@
           </div>
           <h3 class="author-name">Chojnacki Krzysiek</h3>
           <a href="https://warsawjs.com/speakers/krzysiek-chojnacki" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
         <div class="author-card" data-author="Mateusz (mat3e)" role="listitem" tabindex="0" aria-label="Filter by Mateusz (mat3e)">
@@ -126,7 +128,7 @@
           </div>
           <h3 class="author-name">Mateusz (mat3e)</h3>
           <a href="https://warsawjs.com/speakers/mateusz-chrzonstowski" target="_blank" class="speaker-link" title="View speaker profile">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
       </div>
@@ -154,5 +156,112 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
   <script src="script.js"></script>
+
+  <!-- Coding-themed particles background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add particles container
+      const particlesContainer = document.createElement('div');
+      particlesContainer.id = 'particles-js';
+      particlesContainer.style.position = 'fixed';
+      particlesContainer.style.top = '0';
+      particlesContainer.style.left = '0';
+      particlesContainer.style.width = '100%';
+      particlesContainer.style.height = '100%';
+      particlesContainer.style.zIndex = '-1';
+      particlesContainer.style.pointerEvents = 'none';
+      document.body.appendChild(particlesContainer);
+      
+      // Configure particles
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 40,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": ["#e74c3c", "#f7ca18", "#3498db", "#1a1a2e"]
+          },
+          "shape": {
+            "type": ["circle", "triangle", "edge", "polygon"],
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 6
+            }
+          },
+          "opacity": {
+            "value": 0.15,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 0.5,
+              "opacity_min": 0.05,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 2,
+              "size_min": 1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#e74c3c",
+            "opacity": 0.1,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "window",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": false
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 0.3
+              }
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
 </body>
 </html>
