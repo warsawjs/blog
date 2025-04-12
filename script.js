@@ -127,7 +127,7 @@ function createBlogPostElement(post) {
                 <img src="${post.author.image}" alt="${post.author.name}" itemprop="image">
               </div>
             ` : ''}
-            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person" class="post-author-name" onclick="filterByAuthor('${post.author?.name || 'WarsawJS'}')">
               <meta itemprop="name" content="${post.author?.name || 'WarsawJS'}">
               ${post.author?.name || 'WarsawJS'}
             </span>
@@ -155,6 +155,7 @@ function initBlog() {
   const postsGrid = document.getElementById('posts-grid');
   const searchInput = document.getElementById('search-input');
   let currentPosts = [...mockPosts];
+  let activeAuthorFilter = null;
 
   // Function to render posts
   function renderPosts(posts) {
@@ -164,14 +165,90 @@ function initBlog() {
     
     // Add structured data for SEO
     addStructuredData(posts);
+    
+    // Scroll to posts if filtering by author
+    if (activeAuthorFilter) {
+      postsGrid.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   // Initial render
   renderPosts(currentPosts);
 
+  // Filter by author function
+  window.filterByAuthor = function(authorName) {
+    // Reset search input
+    searchInput.value = '';
+    
+    // If clicking the same author again, clear the filter
+    if (activeAuthorFilter === authorName) {
+      activeAuthorFilter = null;
+      renderPosts(mockPosts);
+      
+      // Remove active class from all author cards
+      document.querySelectorAll('.author-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      
+      // Remove filter indicator if it exists
+      const filterIndicator = document.getElementById('filter-indicator');
+      if (filterIndicator) {
+        filterIndicator.remove();
+      }
+      
+      return;
+    }
+    
+    activeAuthorFilter = authorName;
+    
+    // Highlight the active author card
+    document.querySelectorAll('.author-card').forEach(card => {
+      const cardAuthor = card.querySelector('.author-avatar').getAttribute('data-author');
+      if (cardAuthor === authorName) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+    
+    const filteredPosts = mockPosts.filter(post => 
+      post.author?.name === authorName
+    );
+    
+    renderPosts(filteredPosts);
+    
+    // Add or update filter indicator
+    let filterIndicator = document.getElementById('filter-indicator');
+    if (!filterIndicator) {
+      filterIndicator = document.createElement('div');
+      filterIndicator.id = 'filter-indicator';
+      filterIndicator.className = 'filter-indicator';
+      postsGrid.insertAdjacentElement('beforebegin', filterIndicator);
+    }
+    
+    filterIndicator.innerHTML = `
+      <p>Showing posts by <strong>${authorName}</strong></p>
+      <button onclick="filterByAuthor('${authorName}')" class="clear-filter-btn">Clear filter</button>
+    `;
+  };
+
   // Search functionality
   searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
+    
+    // Reset author filter when searching
+    if (activeAuthorFilter && searchTerm) {
+      activeAuthorFilter = null;
+      document.querySelectorAll('.author-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      
+      // Remove filter indicator if it exists
+      const filterIndicator = document.getElementById('filter-indicator');
+      if (filterIndicator) {
+        filterIndicator.remove();
+      }
+    }
     
     if (!searchTerm) {
       renderPosts(mockPosts);
@@ -183,7 +260,8 @@ function initBlog() {
       post.description.toLowerCase().includes(searchTerm) ||
       (post.categories && post.categories.some(category => 
         category.toLowerCase().includes(searchTerm)
-      ))
+      )) ||
+      (post.author?.name && post.author.name.toLowerCase().includes(searchTerm))
     );
     
     renderPosts(filteredPosts);
