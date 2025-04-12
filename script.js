@@ -1,6 +1,18 @@
 // Real Medium post data
 const mockPosts = [
   {
+    title: 'Unleashing Developer Potential: Introducing WarsawJS JAM',
+    description: 'WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...',
+    link: 'https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f',
+    pubDate: '2025-04-12T09:00:00Z',
+    thumbnail: 'public/images/jam.jpeg',
+    author: {
+      name: 'Piotr Zientara',
+      image: null
+    },
+    categories: ['JavaScript', 'Hackathons', 'Networking', 'Community', 'Programming']
+  },
+  {
     title: 'An Elegant Solution for Handling Errors in Express',
     description: 'Error handling in Express applications can be tricky. This article explores an elegant pattern for centralized error handling that makes your code cleaner and more maintainable...',
     link: 'https://medium.com/warsawjs/an-elegant-solution-for-handling-errors-in-express-27332f768c6',
@@ -76,7 +88,7 @@ const mockPosts = [
     title: 'Simplicity in the Spectrum: Identifying and Overcoming Overengineering',
     description: 'This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...',
     link: 'https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2',
-    pubDate: '2022-12-10T10:30:00Z',
+    pubDate: '2024-08-29T10:30:00Z',
     thumbnail: 'public/images/simplicity.jpeg',
     author: {
       name: 'Chojnacki Krzysiek',
@@ -94,27 +106,47 @@ function formatDate(dateString) {
 
 // Create blog post element
 function createBlogPostElement(post) {
+  // Check if this is the JAM post and add the jam image to the link element
+  const isJamPost = post.title.includes('JAM') && post.thumbnail.includes('jam.jpeg');
+  const linkAttributes = isJamPost ? 
+    `href="${post.link}" target="_blank" itemprop="url" style="background-image: url('${post.thumbnail}'); background-size: contain; background-repeat: no-repeat; background-position: right bottom;"` : 
+    `href="${post.link}" target="_blank" itemprop="url"`;
+
   return `
-    <div class="card">
-      <a href="${post.link}" target="_blank">
+    <article class="card" itemscope itemtype="https://schema.org/BlogPosting">
+      <a ${linkAttributes}>
         <div class="image-container">
-          <img src="${post.thumbnail || 'public/images/default-thumbnail.jpg'}" alt="${post.title}">
+          <img src="${post.thumbnail || 'public/images/default-thumbnail.jpg'}" alt="${post.title}" itemprop="image">
         </div>
         <div class="content">
-          <h2 class="card-title">${post.title}</h2>
-          <p class="description">${post.description}</p>
+          <h2 class="card-title" itemprop="headline">${post.title}</h2>
+          <p class="description" itemprop="description">${post.description}</p>
           <div class="author">
             ${post.author?.image ? `
               <div class="author-image">
-                <img src="${post.author.image}" alt="${post.author.name}">
+                <img src="${post.author.image}" alt="${post.author.name}" itemprop="image">
               </div>
             ` : ''}
-            ${post.author?.name || 'WarsawJS'}
-            ${post.pubDate ? `<span class="date">${formatDate(post.pubDate)}</span>` : ''}
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <meta itemprop="name" content="${post.author?.name || 'WarsawJS'}">
+              ${post.author?.name || 'WarsawJS'}
+            </span>
+            ${post.pubDate ? `
+              <span class="date">
+                <meta itemprop="datePublished" content="${post.pubDate}">
+                ${formatDate(post.pubDate)}
+              </span>
+            ` : ''}
           </div>
+          <meta itemprop="publisher" content="WarsawJS">
+          ${post.categories ? `
+            <div class="categories" style="display: none;">
+              ${post.categories.map(category => `<meta itemprop="keywords" content="${category}">`).join('')}
+            </div>
+          ` : ''}
         </div>
       </a>
-    </div>
+    </article>
   `;
 }
 
@@ -129,6 +161,9 @@ function initBlog() {
     postsGrid.innerHTML = posts.length
       ? posts.map(post => createBlogPostElement(post)).join('')
       : '<p>No posts found matching your search.</p>';
+    
+    // Add structured data for SEO
+    addStructuredData(posts);
   }
 
   // Initial render
@@ -153,6 +188,56 @@ function initBlog() {
     
     renderPosts(filteredPosts);
   });
+
+  // Add structured data for SEO
+  function addStructuredData(posts) {
+    // Remove existing structured data if any
+    const existingScript = document.getElementById('structured-data');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    // Create blog posting structured data
+    const blogPostings = posts.map(post => ({
+      '@type': 'BlogPosting',
+      'headline': post.title,
+      'description': post.description,
+      'image': post.thumbnail,
+      'datePublished': post.pubDate,
+      'author': {
+        '@type': 'Person',
+        'name': post.author?.name || 'WarsawJS'
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'WarsawJS',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg'
+        }
+      },
+      'url': post.link,
+      'keywords': post.categories?.join(',')
+    }));
+    
+    // Create structured data schema
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'itemListElement': blogPostings.map((post, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': post
+      }))
+    };
+    
+    // Add structured data to the page
+    const script = document.createElement('script');
+    script.id = 'structured-data';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }
 
   // In a real application, you would fetch from Medium API here
   // This would replace the mockPosts with real data
