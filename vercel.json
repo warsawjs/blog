@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "warsawjs-blog",
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "public/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
