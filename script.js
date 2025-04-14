@@ -110,51 +110,58 @@ const mockPosts = [
   }
 ];
 
-// Format date helper function
+// Helper functions
 function formatDate(dateString) {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
+function isAuthorMatch(postAuthor, filterAuthor) {
+  return (
+    postAuthor === filterAuthor || 
+    // Handle cases where the order of names is different
+    (filterAuthor === "Chojnacki Krzysiek" && postAuthor === "Krzysiek Chojnacki") ||
+    (filterAuthor === "Krzysiek Chojnacki" && postAuthor === "Chojnacki Krzysiek") ||
+    // Handle 'Mateusz (mat3e)' vs 'Mateusz (mat3e)'
+    (filterAuthor.includes("Mateusz") && postAuthor.includes("Mateusz"))
+  );
+}
+
 // Create blog post element
 function createBlogPostElement(post) {
-  // Check if this is the JAM post and add the jam image to the link element
-  const isJamPost = post.title.includes('JAM') && post.thumbnail.includes('jam.jpeg');
-  const linkAttributes = isJamPost ? 
-    `href="${post.link}" target="_blank" itemprop="url" style="background-image: url('${post.thumbnail}'); background-size: contain; background-repeat: no-repeat; background-position: right bottom;"` : 
-    `href="${post.link}" target="_blank" itemprop="url"`;
-
   return `
     <article class="card" itemscope itemtype="https://schema.org/BlogPosting">
-      <a ${linkAttributes}>
-        <div class="image-container">
-          <img src="${post.thumbnail || 'public/images/default-thumbnail.jpg'}" alt="${post.title}" itemprop="image">
-        </div>
-        <div class="content">
-          <h2 class="card-title" itemprop="headline">${post.title}</h2>
-          <p class="description" itemprop="description">${post.description}</p>
-          <div class="author">
-            ${post.author?.image ? `
-              <div class="author-image">
-                <img src="${post.author.image}" alt="${post.author.name}" itemprop="image">
+      <a href="${post.link}" target="_blank" itemprop="url">
+        <div class="card-inner">
+          <div class="image-container">
+            <img src="${post.thumbnail || 'public/images/default-thumbnail.jpg'}" alt="${post.title}" itemprop="image">
+          </div>
+          <div class="content">
+            <h2 class="card-title" itemprop="headline">${post.title}</h2>
+            <p class="description" itemprop="description">${post.description}</p>
+            <meta itemprop="publisher" content="WarsawJS">
+            ${post.categories ? `
+              <div class="categories" style="display: none;">
+                ${post.categories.map(category => `<meta itemprop="keywords" content="${category}">`).join('')}
               </div>
             ` : ''}
-            <span itemprop="author" itemscope itemtype="https://schema.org/Person" class="post-author-name" onclick="filterByAuthor('${post.author?.name || 'WarsawJS'}')">
-              <meta itemprop="name" content="${post.author?.name || 'WarsawJS'}">
-              ${post.author?.name || 'WarsawJS'}
-            </span>
-            ${post.pubDate ? `
-              <span class="date">
-                <meta itemprop="datePublished" content="${post.pubDate}">
-                ${formatDate(post.pubDate)}
-              </span>
-            ` : ''}
           </div>
-          <meta itemprop="publisher" content="WarsawJS">
-          ${post.categories ? `
-            <div class="categories" style="display: none;">
-              ${post.categories.map(category => `<meta itemprop="keywords" content="${category}">`).join('')}
+        </div>
+        <div class="card-footer">
+          ${post.author?.image ? `
+            <div class="author-image">
+              <img src="${post.author.image}" alt="${post.author.name}" itemprop="image">
             </div>
+          ` : ''}
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person" class="post-author-name" onclick="filterByAuthor('${post.author?.name || 'WarsawJS'}')">
+            <meta itemprop="name" content="${post.author?.name || 'WarsawJS'}">
+            ${post.author?.name || 'WarsawJS'}
+          </span>
+          ${post.pubDate ? `
+            <span class="date">
+              <meta itemprop="datePublished" content="${post.pubDate}">
+              ${formatDate(post.pubDate)}
+            </span>
           ` : ''}
         </div>
       </a>
@@ -185,6 +192,11 @@ function initBlog() {
     addStructuredData(posts);
     
     // Add click events to author names in posts
+    setupAuthorClickEvents();
+  }
+  
+  // Setup click events for author names
+  function setupAuthorClickEvents() {
     document.querySelectorAll('.post-author-name').forEach(authorElement => {
       if (authorElement) {
         authorElement.addEventListener('click', function() {
@@ -199,39 +211,44 @@ function initBlog() {
   }
 
   // Set up author card click events
-  const authorCards = document.querySelectorAll('.author-card');
-  if (authorCards && authorCards.length > 0) {
-    authorCards.forEach(card => {
-      if (card) {
-        // Handle click events
-        card.addEventListener('click', function(e) {
-          // Don't trigger if clicking the speaker-link
-          if (e.target.closest('.speaker-link')) {
-            return;
-          }
-          
-          const authorName = this.getAttribute('data-author');
-          if (authorName) {
-            filterByAuthor(authorName);
-          }
-        });
-        
-        // Add keyboard support for accessibility
-        card.addEventListener('keydown', function(e) {
-          // Handle Enter or Space key
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
+  function setupAuthorCards() {
+    const authorCards = document.querySelectorAll('.author-card');
+    if (authorCards && authorCards.length > 0) {
+      authorCards.forEach(card => {
+        if (card) {
+          // Handle click events
+          card.addEventListener('click', function(e) {
+            // Don't trigger if clicking the speaker-link
+            if (e.target.closest('.speaker-link')) {
+              return;
+            }
+            
             const authorName = this.getAttribute('data-author');
             if (authorName) {
               filterByAuthor(authorName);
             }
-          }
-        });
-      }
-    });
-  } else {
-    console.warn('No author cards found in the document');
+          });
+          
+          // Add keyboard support for accessibility
+          card.addEventListener('keydown', function(e) {
+            // Handle Enter or Space key
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const authorName = this.getAttribute('data-author');
+              if (authorName) {
+                filterByAuthor(authorName);
+              }
+            }
+          });
+        }
+      });
+    } else {
+      console.warn('No author cards found in the document');
+    }
   }
+  
+  // Initialize author cards
+  setupAuthorCards();
 
   // Initial render
   renderPosts(currentPosts);
@@ -265,10 +282,7 @@ function initBlog() {
       }
       
       // Remove filter indicator if it exists
-      const filterIndicator = document.getElementById('filter-indicator');
-      if (filterIndicator) {
-        filterIndicator.remove();
-      }
+      removeFilterIndicator();
       
       return;
     }
@@ -293,14 +307,7 @@ function initBlog() {
     // Find posts by this author (handle different name formats)
     const filteredPosts = mockPosts.filter(post => {
       const postAuthor = post.author?.name || '';
-      const match = (
-        postAuthor === authorName || 
-        // Handle cases where the order of names is different
-        (authorName === "Chojnacki Krzysiek" && postAuthor === "Krzysiek Chojnacki") ||
-        (authorName === "Krzysiek Chojnacki" && postAuthor === "Chojnacki Krzysiek") ||
-        // Handle 'Mateusz (mat3e)' vs 'Mateusz (mat3e)'
-        (authorName.includes("Mateusz") && postAuthor.includes("Mateusz"))
-      );
+      const match = isAuthorMatch(postAuthor, authorName);
       
       if (match) {
         console.log(`Match found: "${postAuthor}" matches "${authorName}"`);
@@ -361,10 +368,7 @@ function initBlog() {
         });
         
         // Remove filter indicator if it exists
-        const filterIndicator = document.getElementById('filter-indicator');
-        if (filterIndicator) {
-          filterIndicator.remove();
-        }
+        removeFilterIndicator();
       }
       
       if (!searchTerm) {
@@ -385,6 +389,14 @@ function initBlog() {
     });
   }
 
+  // Helper function to remove filter indicator
+  function removeFilterIndicator() {
+    const filterIndicator = document.getElementById('filter-indicator');
+    if (filterIndicator) {
+      filterIndicator.remove();
+    }
+  }
+  
   // Add structured data for SEO
   function addStructuredData(posts) {
     // Remove existing structured data if any
