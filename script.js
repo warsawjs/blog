@@ -1,6 +1,18 @@
 // Real Medium post data
 const mockPosts = [
   {
+    title: 'Are You Training Your Models?',
+    description: 'Many misunderstand AI model training, believing it\'s as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...',
+    link: 'https://algorytmy.substack.com/p/are-you-training-your-models',
+    pubDate: '2024-07-15T10:00:00Z',
+    thumbnail: 'public/images/Jul 15, 2024.jpeg',
+    author: {
+      name: 'K-algo',
+      image: 'public/images/k-algo.jpg'
+    },
+    categories: ['AI', 'Machine Learning', 'LLM', 'Model Training', 'Workflow']
+  },
+  {
     title: 'Unleashing Developer Potential: Introducing WarsawJS JAM',
     description: 'WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...',
     link: 'https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f',
