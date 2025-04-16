@@ -1,17 +1,4 @@
-// Real Medium post data
-const mockPosts = [
-  {
-    title: 'Making Developer Voices Heard - Avital Tzubeli at WarsawJS Meetup #78',
-    description: 'Discover insights from Avital Tzubeli\'s presentation at WarsawJS Meetup #78 on effective developer advocacy, community building, and how to make developer voices heard in product development...',
-    link: 'https://medium.com/warsawjs/behind-the-scenes-how-push-notifications-scale-to-millions-of-users-4651289e9d00',
-    pubDate: '2021-03-10T18:00:00Z',
-    thumbnail: 'public/images/cover-Meetup-78-Avital-2021.jpeg',
-    author: {
-      name: 'WarsawJS',
-      image: 'public/images/logo-warsawjs-with-dark-text.svg'
-    },
-    categories: ['Developer Relations', 'Community', 'JavaScript', 'DevAdvocacy', 'WarsawJS']
-  },
+const posts = [
   {
     title: 'What is Frontend Architecture?',
     description: 'Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...',
@@ -143,7 +130,19 @@ const mockPosts = [
       image: null
     },
     categories: ['Software Design', 'Best Practices', 'Simplicity']
-  }
+  },
+  {
+    title: 'Making Developer Voices Heard - Avital Tzubeli at WarsawJS Meetup #78',
+    description: 'Discover insights from Avital Tzubeli\'s presentation at WarsawJS Meetup #78 on effective developer advocacy, community building, and how to make developer voices heard in product development...',
+    link: 'https://medium.com/warsawjs/behind-the-scenes-how-push-notifications-scale-to-millions-of-users-4651289e9d00',
+    pubDate: '2021-03-10T18:00:00Z',
+    thumbnail: 'public/images/cover-Meetup-78-Avital-2021.jpeg',
+    author: {
+      name: 'WarsawJS',
+      image: 'public/images/logo-warsawjs-with-dark-text.svg'
+    },
+    categories: ['Developer Relations', 'Community', 'JavaScript', 'DevAdvocacy', 'WarsawJS']
+  },
 ];
 
 // Helper functions
@@ -212,7 +211,7 @@ function createBlogPostElement(post) {
 function initBlog() {
   const postsGrid = document.getElementById('posts-grid');
   const searchInput = document.getElementById('search-input');
-  let currentPosts = [...mockPosts];
+  let currentPosts = [...posts];
   let activeAuthorFilter = null;
 
   // Only proceed if we found the posts grid
@@ -310,7 +309,7 @@ function initBlog() {
     if (activeAuthorFilter === authorName) {
       console.log('Clearing active filter (same author clicked again)');
       activeAuthorFilter = null;
-      renderPosts(mockPosts);
+      renderPosts(posts);
       
       // Remove active class from all author cards
       const authorCards = document.querySelectorAll('.author-card');
@@ -344,7 +343,7 @@ function initBlog() {
     }
     
     // Find posts by this author (handle different name formats)
-    const filteredPosts = mockPosts.filter(post => {
+    const filteredPosts = posts.filter(post => {
       const postAuthor = post.author?.name || '';
       const match = isAuthorMatch(postAuthor, authorName);
       
@@ -411,11 +410,11 @@ function initBlog() {
       }
       
       if (!searchTerm) {
-        renderPosts(mockPosts);
+        renderPosts(posts);
         return;
       }
       
-      const filteredPosts = mockPosts.filter(post => 
+      const filteredPosts = posts.filter(post => 
         post.title.toLowerCase().includes(searchTerm) ||
         post.description.toLowerCase().includes(searchTerm) ||
         (post.categories && post.categories.some(category => 
@@ -485,41 +484,6 @@ function initBlog() {
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }
-
-  // In a real application, you would fetch from Medium API here
-  // This would replace the mockPosts with real data
-  // Example:
-  /*
-  async function fetchMediumPosts() {
-    try {
-      const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/warsawjs');
-      const data = await response.json();
-      
-      if (data.status === 'ok') {
-        const posts = data.items.map(item => ({
-          title: item.title,
-          description: item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...',
-          link: item.link,
-          pubDate: item.pubDate,
-          thumbnail: item.thumbnail,
-          author: {
-            name: item.author,
-            image: null // Medium API doesn't easily provide author images
-          },
-          categories: item.categories
-        }));
-        
-        currentPosts = posts;
-        renderPosts(posts);
-      }
-    } catch (error) {
-      console.error('Error fetching Medium posts:', error);
-    }
-  }
-  
-  // Uncomment to fetch real data:
-  // fetchMediumPosts();
-  */
 }
 
 // Initialize when DOM is ready
