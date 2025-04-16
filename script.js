@@ -1,6 +1,30 @@
 // Real Medium post data
 const mockPosts = [
   {
+    title: 'Making Developer Voices Heard - Avital Tzubeli at WarsawJS Meetup #78',
+    description: 'Discover insights from Avital Tzubeli\'s presentation at WarsawJS Meetup #78 on effective developer advocacy, community building, and how to make developer voices heard in product development...',
+    link: 'https://medium.com/warsawjs/behind-the-scenes-how-push-notifications-scale-to-millions-of-users-4651289e9d00',
+    pubDate: '2021-03-10T18:00:00Z',
+    thumbnail: 'public/images/cover-Meetup-78-Avital-2021.jpeg',
+    author: {
+      name: 'WarsawJS',
+      image: 'public/images/logo-warsawjs-with-dark-text.svg'
+    },
+    categories: ['Developer Relations', 'Community', 'JavaScript', 'DevAdvocacy', 'WarsawJS']
+  },
+  {
+    title: 'What is Frontend Architecture?',
+    description: 'Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...',
+    link: 'https://ducin.dev/what-is-frontend-architecture',
+    pubDate: '2024-09-26T14:00:00Z',
+    thumbnail: 'public/images/blog-it-javascript-frameworks.jpeg',
+    author: {
+      name: 'tomasz-ducin',
+      image: null
+    },
+    categories: ['Frontend', 'Architecture', 'Web Development', 'Best Practices']
+  },
+  {
     title: 'Are You Training Your Models?',
     description: 'Many misunderstand AI model training, believing it\'s as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...',
     link: 'https://algorytmy.substack.com/p/are-you-training-your-models',
@@ -135,7 +159,10 @@ function isAuthorMatch(postAuthor, filterAuthor) {
     (filterAuthor === "Chojnacki Krzysiek" && postAuthor === "Krzysiek Chojnacki") ||
     (filterAuthor === "Krzysiek Chojnacki" && postAuthor === "Chojnacki Krzysiek") ||
     // Handle 'Mateusz (mat3e)' vs 'Mateusz (mat3e)'
-    (filterAuthor.includes("Mateusz") && postAuthor.includes("Mateusz"))
+    (filterAuthor.includes("Mateusz") && postAuthor.includes("Mateusz")) ||
+    // Handle variations of tomasz-ducin
+    (filterAuthor.toLowerCase().includes("tomasz") && postAuthor.toLowerCase().includes("ducin")) ||
+    (filterAuthor.toLowerCase().includes("ducin") && postAuthor.toLowerCase().includes("tomasz"))
   );
 }
 
