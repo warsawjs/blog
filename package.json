@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "description": "Tech blog based on WarsawJS branding collecting links to Medium posts",
   "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "start": "http-server .",
-    "build": "cp -r *.html *.css *.js *.svg public/ dist/"
+    "build": "cp -r *.html *.css *.js *.svg public/ dist/",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{html,css,json,md}": [
+      "prettier --write"
+    ]
   },
   "keywords": [
     "warsawjs",
@@ -17,5 +33,13 @@
   "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
   }
 }
