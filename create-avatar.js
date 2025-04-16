@@ -1,1 +1,1 @@
-console.log("Creating default avatar")
+console.log('Creating default avatar');

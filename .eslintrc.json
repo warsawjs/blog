@@ -4,20 +4,18 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
     "no-console": "warn",
     "no-unused-vars": "warn"
+  },
+  "globals": {
+    "filterByAuthor": "writable"
   }
 }

@@ -4,30 +4,34 @@
   --foreground: #171717;
   --warsawjs-red: #e74c3c;
   --warsawjs-yellow: #f7ca18;
-  --warsawjs-black: #1a1a2e; 
+  --warsawjs-black: #1a1a2e;
   --primary-color: var(--warsawjs-red);
   --text-color: #ffffff;
   --background-color: var(--background);
   --card-background: #ffffff;
   --border-color: #e0e0e0;
   --accent-color: #f0f0f0;
-  
+
   /* Typography */
   --code-font: 'JetBrains Mono', 'Fira Code', monospace;
-  
+
   /* Shadows */
   --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   --card-hover-shadow: 0 15px 30px rgba(231, 76, 60, 0.15);
-  
+
   /* Syntax highlighting colors */
   --syntax-color-1: #e06c75;
   --syntax-color-2: #98c379;
   --syntax-color-3: #61afef;
   --syntax-color-4: #c678dd;
-  
+
   /* Common gradients */
-  --warsawjs-gradient: linear-gradient(90deg, var(--warsawjs-red), var(--warsawjs-yellow));
-  
+  --warsawjs-gradient: linear-gradient(
+    90deg,
+    var(--warsawjs-red),
+    var(--warsawjs-yellow)
+  );
+
   /* Common transitions */
   --hover-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -52,7 +56,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -164,7 +173,8 @@ p {
   padding: 0 2rem;
 }
 
-.title:before, .title:after {
+.title:before,
+.title:after {
   content: '<';
   position: absolute;
   font-family: var(--code-font);
@@ -236,10 +246,10 @@ p {
   border-radius: 12px;
   box-shadow: var(--card-shadow);
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-              box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -298,7 +308,7 @@ p {
   left: 0;
   width: 100%;
   height: 30%;
-  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
   z-index: 1;
   opacity: 0.7;
   transition: opacity 0.3s ease;
@@ -320,7 +330,6 @@ p {
   transform: scale(1.05);
   filter: brightness(1.05);
 }
-
 
 .content {
   padding: 1.8rem;
@@ -383,7 +392,7 @@ p {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 0.75rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 2px solid white;
 }
 
@@ -499,7 +508,7 @@ p {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .author-card:hover {
@@ -521,7 +530,7 @@ p {
 }
 
 .author-card:after {
-  content: '</>'; 
+  content: '</>';
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -637,26 +646,26 @@ p {
     padding: 2rem 0.75rem 1.5rem;
     margin: 1.5rem 0 2.5rem;
   }
-  
+
   .authors-section h2 {
     font-size: 1.5rem;
   }
-  
+
   .authors-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     padding: 0 1rem;
   }
-  
+
   .author-avatar {
     width: 80px;
     height: 80px;
   }
-  
+
   .author-card {
     padding: 1.5rem 0.75rem 1.25rem;
   }
-  
+
   .speaker-link {
     width: 28px;
     height: 28px;
@@ -669,17 +678,17 @@ p {
     gap: 0.75rem;
     padding: 0;
   }
-  
+
   .author-avatar {
     width: 65px;
     height: 65px;
     margin-bottom: 0.75rem;
   }
-  
+
   .author-card {
     padding: 1rem 0.5rem;
   }
-  
+
   .author-name {
     font-size: 0.95rem;
   }
@@ -691,30 +700,30 @@ p {
     padding: 1.5rem 0.5rem 1rem;
     margin: 1.5rem 1rem 2.5rem;
   }
-  
+
   .authors-section h2 {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .authors-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
     padding: 0 0.25rem;
   }
-  
+
   .author-card {
     padding: 0.75rem 0.1rem 0.5rem;
     border-radius: 10px;
   }
-  
+
   .author-avatar {
     width: 55px;
     height: 55px;
     margin-bottom: 0.5rem;
     border-width: 2px;
   }
-  
+
   .author-name {
     font-size: 0.75rem;
     margin-bottom: 0;
@@ -724,23 +733,23 @@ p {
     text-overflow: ellipsis;
     padding: 0 0.2rem;
   }
-  
+
   .speaker-link {
     width: 20px;
     height: 20px;
     top: 0.4rem;
     right: 0.4rem;
   }
-  
+
   .speaker-link svg {
     width: 12px;
     height: 12px;
   }
-  
+
   .author-card:before {
     height: 3px;
   }
-  
+
   .author-card:after {
     display: none;
   }
@@ -751,23 +760,23 @@ p {
     margin: 1.5rem 0.5rem 2.5rem;
     padding: 1.25rem 0.25rem 0.75rem;
   }
-  
+
   .authors-grid {
     gap: 0.4rem;
     padding: 0;
   }
-  
+
   .author-card {
     padding: 0.6rem 0.1rem 0.4rem;
   }
-  
+
   .author-avatar {
     width: 45px;
     height: 45px;
     margin-bottom: 0.4rem;
     border-width: 2px;
   }
-  
+
   .author-name {
     font-size: 0.65rem;
   }
@@ -851,7 +860,7 @@ p {
 
 .footer-logo img {
   height: 50px;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
 }
 
 .copyright {
@@ -859,10 +868,10 @@ p {
   opacity: 0.9;
   padding: 0.5rem 1.5rem;
   border-radius: 30px;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .author-card.active {
@@ -1012,11 +1021,12 @@ p {
   .title {
     font-size: 3rem;
   }
-  
-  .title:before, .title:after {
+
+  .title:before,
+  .title:after {
     font-size: 1.8rem;
   }
-  
+
   .subtitle {
     font-size: 1.2rem;
   }
@@ -1029,28 +1039,29 @@ p {
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .clear-filter-btn {
     width: 100%;
     padding: 0.6rem;
     font-size: 0.95rem;
     text-align: center;
   }
-  
+
   .title {
     font-size: 2.5rem;
     padding: 0 1.5rem;
   }
-  
-  .title:before, .title:after {
+
+  .title:before,
+  .title:after {
     font-size: 1.5rem;
   }
-  
+
   .subtitle {
     font-size: 1.1rem;
     padding: 0 1rem;
   }
-  
+
   .footer:after {
     display: none;
   }
