@@ -1,5 +1,25 @@
 const posts = [
   {
+    title:
+      "Bridging Mathematics and Programming: Professor Andrzej Blikle's Lingua Project",
+    description:
+      "Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...",
+    link: 'https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd',
+    pubDate: '2025-04-17T10:00:00Z',
+    thumbnail: 'public/images/blikle-denotations.jpg',
+    author: {
+      name: 'WarsawJS',
+      image: 'public/images/logo-warsawjs-with-dark-text.svg',
+    },
+    categories: [
+      'Computer Science',
+      'Mathematics',
+      'Programming Languages',
+      'Research',
+      'Denotational Semantics',
+    ],
+  },
+  {
     title: 'What is Frontend Architecture?',
     description:
       'Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...',
