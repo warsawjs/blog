@@ -177,12 +177,12 @@ const posts = [
 ];
 
 // Helper functions
-function formatDate(dateString) {
+const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   return new Date(dateString).toLocaleDateString(undefined, options);
-}
+};
 
-function isAuthorMatch(postAuthor, filterAuthor) {
+const isAuthorMatch = (postAuthor, filterAuthor) => {
   return (
     postAuthor === filterAuthor ||
     // Handle cases where the order of names is different
@@ -198,10 +198,10 @@ function isAuthorMatch(postAuthor, filterAuthor) {
     (filterAuthor.toLowerCase().includes('ducin') &&
       postAuthor.toLowerCase().includes('tomasz'))
   );
-}
+};
 
 // Create blog post element
-function createBlogPostElement(post) {
+const createBlogPostElement = (post) => {
   return `
     <article class="card" itemscope itemtype="https://schema.org/BlogPosting">
       <a href="${post.link}" target="_blank" itemprop="url">
@@ -263,10 +263,10 @@ function createBlogPostElement(post) {
       </a>
     </article>
   `;
-}
+};
 
 // Initialize the blog
-function initBlog() {
+const initBlog = () => {
   const postsGrid = document.getElementById('posts-grid');
   const searchInput = document.getElementById('search-input');
   let currentPosts = [...posts];
@@ -274,16 +274,14 @@ function initBlog() {
 
   // Only proceed if we found the posts grid
   if (!postsGrid) {
-    /* eslint-disable no-console */
     console.error('Posts grid element not found');
-    /* eslint-enable no-console */
     return;
   }
 
   // Function to render posts
-  function renderPosts(posts) {
+  const renderPosts = (posts) => {
     postsGrid.innerHTML = posts.length
-      ? posts.map((post) => createBlogPostElement(post)).join('')
+      ? posts.map(createBlogPostElement).join('')
       : '<p>No posts found matching your search.</p>';
 
     // Add structured data for SEO
@@ -291,10 +289,10 @@ function initBlog() {
 
     // Add click events to author names in posts
     setupAuthorClickEvents();
-  }
+  };
 
   // Setup click events for author names
-  function setupAuthorClickEvents() {
+  const setupAuthorClickEvents = () => {
     document.querySelectorAll('.post-author-name').forEach((authorElement) => {
       if (authorElement) {
         authorElement.addEventListener('click', function () {
@@ -306,12 +304,12 @@ function initBlog() {
         });
       }
     });
-  }
+  };
 
   // Set up author card click events
-  function setupAuthorCards() {
+  const setupAuthorCards = () => {
     const authorCards = document.querySelectorAll('.author-card');
-    if (authorCards && authorCards.length > 0) {
+    if (authorCards?.length > 0) {
       authorCards.forEach((card) => {
         if (card) {
           // Handle click events
@@ -341,11 +339,67 @@ function initBlog() {
         }
       });
     } else {
-      /* eslint-disable no-console */
       console.warn('No author cards found in the document');
-      /* eslint-enable no-console */
     }
-  }
+  };
+
+  // Helper function to remove filter indicator
+  const removeFilterIndicator = () => {
+    const filterIndicator = document.getElementById('filter-indicator');
+    if (filterIndicator) {
+      filterIndicator.remove();
+    }
+  };
+
+  // Add structured data for SEO
+  const addStructuredData = (posts) => {
+    // Remove existing structured data if any
+    const existingScript = document.getElementById('structured-data');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Create blog posting structured data
+    const blogPostings = posts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.description,
+      image: post.thumbnail,
+      datePublished: post.pubDate,
+      author: {
+        '@type': 'Person',
+        name: post.author?.name || 'WarsawJS',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'WarsawJS',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg',
+        },
+      },
+      url: post.link,
+      keywords: post.categories?.join(','),
+    }));
+
+    // Create structured data schema
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: blogPostings.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: post,
+      })),
+    };
+
+    // Add structured data to the page
+    const script = document.createElement('script');
+    script.id = 'structured-data';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  };
 
   // Initialize author cards
   setupAuthorCards();
@@ -354,11 +408,9 @@ function initBlog() {
   renderPosts(currentPosts);
 
   // Filter by author function
-  window.filterByAuthor = function (authorName) {
+  window.filterByAuthor = (authorName) => {
     if (!authorName) {
-      /* eslint-disable no-console */
       console.error('No author name provided to filter');
-      /* eslint-enable no-console */
       return;
     }
 
@@ -374,7 +426,7 @@ function initBlog() {
 
       // Remove active class from all author cards
       const authorCards = document.querySelectorAll('.author-card');
-      if (authorCards && authorCards.length > 0) {
+      if (authorCards?.length > 0) {
         authorCards.forEach((card) => {
           if (card) card.classList.remove('active');
         });
@@ -390,7 +442,7 @@ function initBlog() {
 
     // Highlight the active author card
     const authorCards = document.querySelectorAll('.author-card');
-    if (authorCards && authorCards.length > 0) {
+    if (authorCards?.length > 0) {
       authorCards.forEach((card) => {
         if (!card) return;
 
@@ -406,16 +458,8 @@ function initBlog() {
     // Find posts by this author (handle different name formats)
     const filteredPosts = posts.filter((post) => {
       const postAuthor = post.author?.name || '';
-      const match = isAuthorMatch(postAuthor, authorName);
-      return match;
+      return isAuthorMatch(postAuthor, authorName);
     });
-
-    if (!postsGrid) {
-      /* eslint-disable no-console */
-      console.error('Posts grid element not found');
-      /* eslint-enable no-console */
-      return;
-    }
 
     renderPosts(filteredPosts);
 
@@ -486,65 +530,7 @@ function initBlog() {
       renderPosts(filteredPosts);
     });
   }
-
-  // Helper function to remove filter indicator
-  function removeFilterIndicator() {
-    const filterIndicator = document.getElementById('filter-indicator');
-    if (filterIndicator) {
-      filterIndicator.remove();
-    }
-  }
-
-  // Add structured data for SEO
-  function addStructuredData(posts) {
-    // Remove existing structured data if any
-    const existingScript = document.getElementById('structured-data');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Create blog posting structured data
-    const blogPostings = posts.map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      image: post.thumbnail,
-      datePublished: post.pubDate,
-      author: {
-        '@type': 'Person',
-        name: post.author?.name || 'WarsawJS',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'WarsawJS',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg',
-        },
-      },
-      url: post.link,
-      keywords: post.categories?.join(','),
-    }));
-
-    // Create structured data schema
-    const structuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      itemListElement: blogPostings.map((post, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: post,
-      })),
-    };
-
-    // Add structured data to the page
-    const script = document.createElement('script');
-    script.id = 'structured-data';
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }
-}
+};
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initBlog);
