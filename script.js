@@ -274,7 +274,9 @@ function initBlog() {
 
   // Only proceed if we found the posts grid
   if (!postsGrid) {
+    /* eslint-disable no-console */
     console.error('Posts grid element not found');
+    /* eslint-enable no-console */
     return;
   }
 
@@ -339,7 +341,9 @@ function initBlog() {
         }
       });
     } else {
+      /* eslint-disable no-console */
       console.warn('No author cards found in the document');
+      /* eslint-enable no-console */
     }
   }
 
@@ -352,11 +356,11 @@ function initBlog() {
   // Filter by author function
   window.filterByAuthor = function (authorName) {
     if (!authorName) {
+      /* eslint-disable no-console */
       console.error('No author name provided to filter');
+      /* eslint-enable no-console */
       return;
     }
-
-    console.log(`Filtering by author: ${authorName}`);
 
     // If using search input (which is now removed)
     if (searchInput) {
@@ -365,7 +369,6 @@ function initBlog() {
 
     // If clicking the same author again, clear the filter
     if (activeAuthorFilter === authorName) {
-      console.log('Clearing active filter (same author clicked again)');
       activeAuthorFilter = null;
       renderPosts(posts);
 
@@ -404,18 +407,13 @@ function initBlog() {
     const filteredPosts = posts.filter((post) => {
       const postAuthor = post.author?.name || '';
       const match = isAuthorMatch(postAuthor, authorName);
-
-      if (match) {
-        console.log(`Match found: "${postAuthor}" matches "${authorName}"`);
-      }
-
       return match;
     });
 
-    console.log(`Found ${filteredPosts.length} posts for author ${authorName}`);
-
     if (!postsGrid) {
+      /* eslint-disable no-console */
       console.error('Posts grid element not found');
+      /* eslint-enable no-console */
       return;
     }
 

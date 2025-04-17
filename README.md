@@ -17,7 +17,7 @@ A tech blog based on WarsawJS branding that collects links, titles, and descript
 ## ✨ Features
 
 - **Clean Design** - Modern HTML/CSS/JavaScript implementation
-- **WarsawJS Branding** - Consistent navy blue (#334556) color scheme
+- **WarsawJS Branding** - Consistent color scheme
 - **Responsive Layout** - Optimized for all device sizes
 - **Content Aggregation** - Easy integration with content sources
 - **Author Filtering** - Filter posts by specific authors
