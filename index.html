@@ -9,15 +9,219 @@
       content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community"
     />
     <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://s3.eu-central-1.amazonaws.com" />
+
+    <!-- Critical CSS -->
+    <style>
+      :root {
+        --background: #f8f9fa;
+        --foreground: #171717;
+        --warsawjs-red: #e74c3c;
+        --warsawjs-yellow: #f7ca18;
+        --warsawjs-black: #1a1a2e;
+        --primary-color: var(--warsawjs-red);
+        --text-color: #ffffff;
+        --background-color: var(--background);
+        --card-background: #ffffff;
+        --border-color: #e0e0e0;
+        --accent-color: #f0f0f0;
+        --code-font: 'JetBrains Mono', 'Fira Code', monospace;
+        --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        --card-hover-shadow: 0 15px 30px rgba(231, 76, 60, 0.15);
+        --hover-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body {
+        font-family: 'Lato', sans-serif;
+        line-height: 1.5;
+        max-width: 100vw;
+        overflow-x: hidden;
+        background-color: var(--background-color);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      /* Header styles */
+      .header {
+        background-color: var(--warsawjs-black);
+        color: var(--text-color);
+        padding: 1.5rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo a {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav a {
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem 0;
+      }
+
+      /* Main content styles */
+      .main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .title {
+        color: var(--warsawjs-black);
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        position: relative;
+        display: inline-block;
+        padding: 0 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        color: #555;
+        max-width: 750px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+        font-weight: 300;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+        .nav ul {
+          gap: 1rem;
+        }
+
+        .title {
+          font-size: 3rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          padding: 0.75rem;
+          z-index: 1000;
+        }
+
+        .header-content {
+          justify-content: space-between;
+          width: 100%;
+          padding: 0;
+          gap: 0.5rem;
+        }
+
+        .logo img {
+          height: 40px;
+        }
+
+        .nav ul {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding-right: 30px;
+          margin: 0;
+        }
+
+        .main {
+          padding-top: 7rem;
+        }
+      }
+
+      /* Github corner */
+      .github-corner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1001;
+      }
+
+      .github-corner svg {
+        fill: var(--warsawjs-black);
+        color: #fff;
+        width: 80px;
+        height: 80px;
+      }
+
+      /* Posts grid */
+      .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 640px) {
+        .posts-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 
     <!-- SEO Meta Tags -->
     <meta name="author" content="WarsawJS" />
@@ -72,6 +276,39 @@
       title="WarsawJS Blog RSS Feed"
       href="rss.xml"
     />
+
+    <!-- Deferred non-critical CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Fallback for browsers that don't support JS loading of CSS -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+      <link rel="stylesheet" href="styles.css" />
+    </noscript>
   </head>
   <body>
     <!-- GitHub Corner -->
@@ -105,6 +342,8 @@
             <img
               src="public/images/logo-warsawjs-with-white-text.svg"
               alt="WarsawJS Logo"
+              width="120"
+              height="50"
             />
           </a>
         </div>
@@ -161,6 +400,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/tomasz-ducin.jpg"
                 alt="Tomasz Ducin"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -198,6 +440,9 @@
               <img
                 src="public/images/k-algo.jpg"
                 alt="K-algo"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -235,6 +480,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/michal-zalecki.jpg"
                 alt="Michał Załęcki"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -272,6 +520,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/yonatan-kra.jpg"
                 alt="Yonatan Kra"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -309,6 +560,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/iga-trydulska.jpg"
                 alt="Iga Trydulska"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -346,6 +600,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg"
                 alt="Piotr Zientara"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -383,6 +640,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/krzysiek-chojnacki.jpg"
                 alt="Krzysiek Chojnacki"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -420,6 +680,9 @@
               <img
                 src="https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/mateusz-chrzonstowski.jpg"
                 alt="Mateusz Chrzonstowski"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -457,6 +720,9 @@
               <img
                 src="public/images/logo-warsawjs-with-dark-text.svg"
                 alt="WarsawJS"
+                width="110"
+                height="110"
+                loading="lazy"
                 onerror="this.src='public/images/default-avatar.png'; this.onerror='';"
               />
             </div>
@@ -498,6 +764,8 @@
           <img
             src="public/images/logo-warsawjs-with-white-text.svg"
             alt="WarsawJS Logo"
+            width="120"
+            height="50"
           />
         </div>
         <p class="copyright">
@@ -506,17 +774,36 @@
       </div>
     </footer>
 
+    <!-- Critical initial JS -->
     <script>
       // Set current year in footer
       document.getElementById('current-year').textContent =
         new Date().getFullYear();
-    </script>
-    <script src="script.js"></script>
 
-    <!-- Coding-themed particles background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+      // Preload the main script
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = 'script.js';
+      preloadLink.as = 'script';
+      document.head.appendChild(preloadLink);
+
+      // Add posts-grid loading indicator
+      const postsGrid = document.getElementById('posts-grid');
+      if (postsGrid) {
+        postsGrid.innerHTML =
+          '<div style="text-align: center; padding: 2rem;">Loading blog posts...</div>';
+      }
+    </script>
+
+    <!-- Defer non-critical JS -->
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+      defer
+    ></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
+      // Initialize particles after page load
+      window.addEventListener('load', function () {
         // Add particles container
         const particlesContainer = document.createElement('div');
         particlesContainer.id = 'particles-js';
@@ -530,121 +817,78 @@
         document.body.appendChild(particlesContainer);
 
         // Configure particles
-        particlesJS('particles-js', {
-          particles: {
-            number: {
-              value: 40,
-              density: {
-                enable: true,
-                value_area: 800,
+        if (window.particlesJS) {
+          window.particlesJS('particles-js', {
+            particles: {
+              number: { value: 40, density: { enable: true, value_area: 800 } },
+              color: {
+                value: ['#e74c3c', '#f7ca18', '#3498db', '#1a1a2e', '#2ecc71'],
               },
-            },
-            color: {
-              value: ['#e74c3c', '#f7ca18', '#3498db', '#1a1a2e', '#2ecc71'],
-            },
-            shape: {
-              type: ['circle', 'triangle', 'star', 'polygon', 'code'],
-              stroke: {
-                width: 0,
-                color: '#000000',
-              },
-              polygon: {
-                nb_sides: 6,
-              },
-              image: {
-                src: 'public/images/logo-warsawjs-with-dark-text.svg',
-                width: 100,
-                height: 100,
-              },
-              custom: [
-                {
-                  shape: 'code',
-                  draw: function (context, x, y, radius) {
-                    const codes = ['{...}', '() => {}', '</>'];
-                    const code =
-                      codes[Math.floor(Math.random() * codes.length)];
-                    context.font = radius + 'px "JetBrains Mono", monospace';
-                    context.fillText(code, x - radius, y + radius / 3);
-                  },
-                },
-              ],
-            },
-            opacity: {
-              value: 0.2,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 0.5,
-                opacity_min: 0.05,
-                sync: false,
-              },
-            },
-            size: {
-              value: 7,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 2,
-                size_min: 1,
-                sync: false,
-              },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: '#e74c3c',
-              opacity: 0.1,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 1,
-              direction: 'none',
-              random: true,
-              straight: false,
-              out_mode: 'out',
-              bounce: false,
-              attract: {
-                enable: true,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-          },
-          interactivity: {
-            detect_on: 'window',
-            events: {
-              onhover: {
-                enable: true,
-                mode: 'bubble',
-              },
-              onclick: {
-                enable: true,
-                mode: 'push',
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 140,
-                line_linked: {
-                  opacity: 0.3,
+              shape: {
+                type: ['circle', 'triangle', 'star', 'polygon'],
+                stroke: { width: 0, color: '#000000' },
+                polygon: { nb_sides: 6 },
+                image: {
+                  src: 'public/images/logo-warsawjs-with-dark-text.svg',
+                  width: 100,
+                  height: 100,
                 },
               },
-              bubble: {
+              opacity: {
+                value: 0.2,
+                random: true,
+                anim: {
+                  enable: true,
+                  speed: 0.5,
+                  opacity_min: 0.05,
+                  sync: false,
+                },
+              },
+              size: {
+                value: 7,
+                random: true,
+                anim: { enable: true, speed: 2, size_min: 1, sync: false },
+              },
+              line_linked: {
+                enable: true,
                 distance: 150,
-                size: 12,
-                duration: 2,
-                opacity: 0.8,
-                speed: 3,
+                color: '#e74c3c',
+                opacity: 0.1,
+                width: 1,
               },
-              push: {
-                particles_nb: 3,
+              move: {
+                enable: true,
+                speed: 1,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false,
+                attract: { enable: true, rotateX: 600, rotateY: 1200 },
               },
             },
-          },
-          retina_detect: true,
-        });
+            interactivity: {
+              detect_on: 'window',
+              events: {
+                onhover: { enable: true, mode: 'bubble' },
+                onclick: { enable: true, mode: 'push' },
+                resize: true,
+              },
+              modes: {
+                grab: { distance: 140, line_linked: { opacity: 0.3 } },
+                bubble: {
+                  distance: 150,
+                  size: 12,
+                  duration: 2,
+                  opacity: 0.8,
+                  speed: 3,
+                },
+                push: { particles_nb: 3 },
+              },
+            },
+            retina_detect: true,
+          });
+        }
       });
     </script>
   </body>
