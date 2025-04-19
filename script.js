@@ -46,8 +46,9 @@ const posts = [
     pubDate: '2024-09-26T14:00:00Z',
     thumbnail: 'public/images/blog-it-javascript-frameworks.jpeg',
     author: {
-      name: 'tomasz-ducin',
-      image: null,
+      name: 'Tomasz Ducin',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/tomasz-ducin.jpg',
     },
     categories: [
       'Frontend',
@@ -78,7 +79,8 @@ const posts = [
     thumbnail: 'public/images/jam.jpeg',
     author: {
       name: 'Piotr Zientara',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
     },
     categories: [
       'JavaScript',
@@ -97,7 +99,8 @@ const posts = [
     thumbnail: 'public/images/elegant.jpeg',
     author: {
       name: 'Michał Załęcki',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/michal-zalecki.jpg',
     },
     categories: ['Express', 'Node.js', 'Error Handling'],
   },
@@ -110,7 +113,8 @@ const posts = [
     thumbnail: 'public/images/bitwise.jpeg',
     author: {
       name: 'Yonatan Kra',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/yonatan-kra.jpg',
     },
     categories: ['JavaScript', 'Bitwise Operations', 'Programming'],
   },
@@ -123,7 +127,8 @@ const posts = [
     thumbnail: 'public/images/aws.jpeg',
     author: {
       name: 'Mateusz (mat3e)',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/mateusz-chrzonstowski.jpg',
     },
     categories: ['AWS', 'Static Websites', 'Cloud'],
   },
@@ -136,7 +141,8 @@ const posts = [
     thumbnail: 'public/images/lalaland.jpg',
     author: {
       name: 'Iga Trydulska',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/iga-trydulska.jpg',
     },
     categories: ['AI', 'Fashion', 'Technology', 'Ethics'],
   },
@@ -149,7 +155,8 @@ const posts = [
     thumbnail: 'public/images/aws_static.jpeg',
     author: {
       name: 'Mateusz (mat3e)',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/mateusz-chrzonstowski.jpg',
     },
     categories: ['AWS', 'Static Websites', 'Cloud'],
   },
@@ -162,7 +169,8 @@ const posts = [
     thumbnail: 'public/images/mission.jpeg',
     author: {
       name: 'Piotr Zientara',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
     },
     categories: ['WarsawJS', 'Community', 'JavaScript'],
   },
@@ -175,7 +183,8 @@ const posts = [
     thumbnail: 'public/images/types.jpeg',
     author: {
       name: 'Chojnacki Krzysiek',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/krzysiek-chojnacki.jpg',
     },
     categories: ['TypeScript', 'Template Literals', 'Type Safety'],
   },
@@ -189,7 +198,8 @@ const posts = [
     thumbnail: 'public/images/simplicity.jpeg',
     author: {
       name: 'Chojnacki Krzysiek',
-      image: null,
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/krzysiek-chojnacki.jpg',
     },
     categories: ['Software Design', 'Best Practices', 'Simplicity'],
   },
@@ -222,28 +232,96 @@ const formatDate = (dateString) => {
 };
 
 const isAuthorMatch = (postAuthor, filterAuthor) => {
+  // Normalize both strings for more consistent comparison
+  const normalizedPostAuthor = postAuthor.toLowerCase().replace(/[-_]/g, ' ');
+  const normalizedFilterAuthor = filterAuthor
+    .toLowerCase()
+    .replace(/[-_]/g, ' ');
+
   return (
     postAuthor === filterAuthor ||
+    normalizedPostAuthor === normalizedFilterAuthor ||
     // Handle cases where the order of names is different
     (filterAuthor === 'Chojnacki Krzysiek' &&
       postAuthor === 'Krzysiek Chojnacki') ||
     (filterAuthor === 'Krzysiek Chojnacki' &&
       postAuthor === 'Chojnacki Krzysiek') ||
     // Handle 'Mateusz (mat3e)' vs 'Mateusz (mat3e)'
-    (filterAuthor.includes('Mateusz') && postAuthor.includes('Mateusz')) ||
-    // Handle variations of tomasz-ducin
-    (filterAuthor.toLowerCase().includes('tomasz') &&
-      postAuthor.toLowerCase().includes('ducin')) ||
-    (filterAuthor.toLowerCase().includes('ducin') &&
-      postAuthor.toLowerCase().includes('tomasz'))
+    (normalizedFilterAuthor.includes('mateusz') &&
+      normalizedPostAuthor.includes('mateusz')) ||
+    // Handle variations of Tomasz Ducin
+    (normalizedFilterAuthor.includes('tomasz') &&
+      normalizedPostAuthor.includes('ducin')) ||
+    (normalizedFilterAuthor.includes('ducin') &&
+      normalizedPostAuthor.includes('tomasz'))
   );
+};
+
+// Helper function to create a slug from a title
+const createSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .trim(); // Trim any leading/trailing spaces
+};
+
+// Helper function to get speaker profile URL
+const getSpeakerProfileUrl = (authorName) => {
+  // Handle special cases
+  if (authorName === 'WarsawJS') {
+    return 'https://warsawjs.com';
+  }
+
+  if (authorName === 'Tomasz Ducin') {
+    return 'https://ducin.dev/';
+  }
+
+  if (authorName === 'K-algo') {
+    return 'https://algorytmy.substack.com/';
+  }
+
+  if (authorName === 'Mateusz (mat3e)') {
+    return 'https://warsawjs.com/speakers/mateusz-chrzonstowski';
+  }
+
+  if (authorName === 'Michał Załęcki') {
+    return 'https://warsawjs.com/speakers/michal-zalecki';
+  }
+
+  if (authorName === 'Yonatan Kra') {
+    return 'https://warsawjs.com/speakers/yonatan-kra';
+  }
+
+  if (authorName === 'Iga Trydulska') {
+    return 'https://warsawjs.com/speakers/iga-trydulska';
+  }
+
+  if (authorName === 'Piotr Zientara') {
+    return 'https://warsawjs.com/speakers/piotr-zientara';
+  }
+
+  if (
+    authorName === 'Chojnacki Krzysiek' ||
+    authorName === 'Krzysiek Chojnacki'
+  ) {
+    return 'https://warsawjs.com/speakers/krzysiek-chojnacki';
+  }
+
+  // Default case: link to WarsawJS speakers profile
+  const slug = authorName.toLowerCase().replace(/\s+/g, '-');
+  return `https://warsawjs.com/speakers/${slug}`;
 };
 
 // Create blog post element
 const createBlogPostElement = (post) => {
+  const slug = createSlug(post.title);
   return `
-    <article class="card" itemscope itemtype="https://schema.org/BlogPosting">
-      <a href="${post.link}" target="_blank" itemprop="url">
+    <article class="card" itemscope itemtype="https://schema.org/BlogPosting" data-post-id="${slug}">
+      <a href="#${slug}" class="post-link" data-original-link="${
+    post.link
+  }" data-post-slug="${slug}">
         <div class="card-inner">
           <div class="image-container">
             <img src="${
@@ -282,7 +360,7 @@ const createBlogPostElement = (post) => {
           `
               : ''
           }
-          <span itemprop="author" itemscope itemtype="https://schema.org/Person" class="post-author-name" onclick="filterByAuthor('${
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person" class="post-author-name" onclick="event.stopPropagation(); filterByAuthor('${
             post.author?.name || 'WarsawJS'
           }')">
             <meta itemprop="name" content="${post.author?.name || 'WarsawJS'}">
@@ -304,18 +382,113 @@ const createBlogPostElement = (post) => {
   `;
 };
 
+// Create popup HTML
+const createPopupHTML = () => {
+  return `
+    <div id="post-popup" class="post-popup">
+      <div class="popup-container">
+        <div class="popup-header">
+          <button class="close-popup" aria-label="Close popup">&times;</button>
+        </div>
+        <div class="popup-content">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+// Function to create popup content for a post
+const createPopupContent = (post) => {
+  return `
+    <div class="popup-post">
+      <div class="popup-post-header">
+        <h2>${post.title}</h2>
+        <div class="popup-post-meta">
+          <div class="popup-author">
+            ${
+              post.author?.image
+                ? `<a href="${getSpeakerProfileUrl(
+                    post.author.name
+                  )}" target="_blank" class="popup-author-link" title="View ${
+                    post.author.name
+                  }'s profile">
+                    <img src="${post.author.image}" alt="${
+                    post.author.name
+                  }" class="popup-author-image">
+                  </a>`
+                : ''
+            }
+            <a href="${getSpeakerProfileUrl(
+              post.author?.name || 'WarsawJS'
+            )}" target="_blank" class="popup-author-name">
+              ${post.author?.name || 'WarsawJS'}
+            </a>
+          </div>
+          ${
+            post.pubDate
+              ? `<span class="popup-date">${formatDate(post.pubDate)}</span>`
+              : ''
+          }
+        </div>
+      </div>
+      
+      <div class="popup-post-columns">
+        <div class="popup-post-content">
+          <p class="popup-description">${post.description}</p>
+          
+          ${
+            post.categories?.length
+              ? `
+            <div class="popup-categories">
+              <h3>Categories:</h3>
+              <div class="category-tags">
+                ${post.categories
+                  .map((cat) => `<span class="category-tag">${cat}</span>`)
+                  .join('')}
+              </div>
+            </div>
+            `
+              : ''
+          }
+        </div>
+        
+        <div class="popup-post-image-container">
+          <div class="popup-post-image">
+            <img src="${
+              post.thumbnail || 'public/images/default-thumbnail.jpg'
+            }" alt="${post.title}">
+          </div>
+          <div class="popup-read-more">
+            <a href="${
+              post.link
+            }" target="_blank" class="read-original">Read full article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
 // Initialize the blog
 const initBlog = () => {
   const postsGrid = document.getElementById('posts-grid');
   const searchInput = document.getElementById('search-input');
   let currentPosts = [...posts];
   let activeAuthorFilter = null;
+  let activePopupSlug = null;
 
   // Only proceed if we found the posts grid
   if (!postsGrid) {
     console.error('Posts grid element not found');
     return;
   }
+
+  // Add popup to the DOM
+  document.body.insertAdjacentHTML('beforeend', createPopupHTML());
+  const popup = document.getElementById('post-popup');
+  const popupContent = popup.querySelector('.popup-content');
+  const closePopupButton = popup.querySelector('.close-popup');
 
   // Function to render posts
   const renderPosts = (posts) => {
@@ -328,7 +501,101 @@ const initBlog = () => {
 
     // Add click events to author names in posts
     setupAuthorClickEvents();
+
+    // Add click events to post links
+    setupPostClickEvents();
   };
+
+  // Function to find post by slug
+  const findPostBySlug = (slug) => {
+    return posts.find((post) => createSlug(post.title) === slug);
+  };
+
+  // Function to open popup for a post
+  const openPostPopup = (slug) => {
+    const post = findPostBySlug(slug);
+    if (!post) return;
+
+    // Set active slug
+    activePopupSlug = slug;
+
+    // Update URL without reloading the page
+    if (history.pushState) {
+      window.history.pushState({ slug }, post.title, `#${slug}`);
+      document.title = `${post.title} - WarsawJS Blog`;
+    }
+
+    // Fill popup with content
+    popupContent.innerHTML = createPopupContent(post);
+
+    // Show popup
+    popup.classList.add('active');
+    document.body.classList.add('popup-open');
+  };
+
+  // Function to close popup
+  const closePostPopup = () => {
+    // Reset URL
+    if (history.pushState && activePopupSlug) {
+      window.history.pushState(
+        {},
+        'WarsawJS Blog - Community Articles',
+        window.location.pathname
+      );
+      document.title = 'WarsawJS Blog - Community Articles';
+    }
+
+    // Hide popup
+    popup.classList.remove('active');
+    document.body.classList.remove('popup-open');
+
+    // Reset active slug
+    activePopupSlug = null;
+  };
+
+  // Set up click events for post links
+  const setupPostClickEvents = () => {
+    document.querySelectorAll('.post-link').forEach((link) => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const slug = this.getAttribute('data-post-slug');
+        if (slug) {
+          openPostPopup(slug);
+        }
+      });
+    });
+  };
+
+  // Handle popup close button
+  closePopupButton.addEventListener('click', closePostPopup);
+
+  // Close popup when clicking outside the popup content
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) {
+      closePostPopup();
+    }
+  });
+
+  // Handle back/forward browser navigation
+  window.addEventListener('popstate', function (e) {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      openPostPopup(hash);
+    } else {
+      closePostPopup();
+    }
+  });
+
+  // Check for hash in URL on page load
+  const checkUrlForPost = () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      openPostPopup(hash);
+    }
+  };
+
+  // Run hash check after initial render
+  setTimeout(checkUrlForPost, 100);
 
   // Setup click events for author names
   const setupAuthorClickEvents = () => {
@@ -399,27 +666,37 @@ const initBlog = () => {
     }
 
     // Create blog posting structured data
-    const blogPostings = posts.map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      image: post.thumbnail,
-      datePublished: post.pubDate,
-      author: {
-        '@type': 'Person',
-        name: post.author?.name || 'WarsawJS',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'WarsawJS',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg',
+    const blogPostings = posts.map((post) => {
+      const slug = createSlug(post.title);
+      return {
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.description,
+        image: post.thumbnail,
+        datePublished: post.pubDate,
+        author: {
+          '@type': 'Person',
+          name: post.author?.name || 'WarsawJS',
         },
-      },
-      url: post.link,
-      keywords: post.categories?.join(','),
-    }));
+        publisher: {
+          '@type': 'Organization',
+          name: 'WarsawJS',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg',
+          },
+        },
+        // Add both original link and internal link
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://blog.warsawjs.com/#${slug}`,
+        },
+        url: `https://blog.warsawjs.com/#${slug}`,
+        // Keep original link as sameAs
+        sameAs: post.link,
+        keywords: post.categories?.join(','),
+      };
+    });
 
     // Create structured data schema
     const structuredData = {
@@ -569,6 +846,54 @@ const initBlog = () => {
       renderPosts(filteredPosts);
     });
   }
+};
+
+// Helper function to generate sitemap.xml content
+const generateSitemap = () => {
+  const today = new Date().toISOString().split('T')[0];
+  let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://blog.warsawjs.com/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>`;
+
+  // Add individual post URLs
+  posts.forEach((post) => {
+    const slug = createSlug(post.title);
+    const lastmod = post.pubDate
+      ? new Date(post.pubDate).toISOString().split('T')[0]
+      : today;
+
+    sitemapContent += `
+  <url>
+    <loc>https://blog.warsawjs.com/#${slug}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+  });
+
+  sitemapContent += `
+</urlset>`;
+
+  return sitemapContent;
+};
+
+// Function to download sitemap (for administrators)
+window.downloadSitemap = () => {
+  const sitemapContent = generateSitemap();
+  const blob = new Blob([sitemapContent], { type: 'application/xml' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'sitemap.xml';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 };
 
 // Initialize when DOM is ready
