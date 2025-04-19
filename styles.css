@@ -217,7 +217,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    padding: 1rem; /* Reduce padding on both sides on mobile */
+    padding: 0.75rem; /* Reduce padding on both sides on mobile */
     z-index: 1000; /* Ensure it stays on top of other content */
   }
 
@@ -225,6 +225,8 @@ p {
     justify-content: space-between; /* Space items evenly */
     align-items: center;
     width: 100%;
+    padding: 0;
+    gap: 0.5rem; /* Add a small gap between logo and nav */
   }
 
   .logo {
@@ -235,9 +237,16 @@ p {
     height: 40px; /* Slightly smaller logo on mobile */
   }
 
+  .nav {
+    flex: 1; /* Allow nav to take remaining space */
+  }
+
   .nav ul {
-    gap: 1rem; /* Reduce gap between nav items on mobile */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     padding-right: 30px; /* Add padding to prevent GitHub icon overlap */
+    margin: 0; /* Remove any default margins */
   }
 }
 
