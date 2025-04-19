@@ -896,5 +896,58 @@ window.downloadSitemap = () => {
   URL.revokeObjectURL(url);
 };
 
+// Handle author grid scrolling with arrow buttons
+const initAuthorScrollButtons = () => {
+  const authorsGrid = document.querySelector('.authors-grid');
+  const leftButton = document.querySelector('.scroll-indicator.scroll-left');
+  const rightButton = document.querySelector('.scroll-indicator.scroll-right');
+
+  if (!authorsGrid || !leftButton || !rightButton) {
+    console.warn('Author grid or scroll buttons not found');
+    return;
+  }
+
+  // Function to scroll the grid
+  const scrollGrid = (direction) => {
+    const scrollAmount = 300; // Adjust the scroll amount as needed
+    const currentScroll = authorsGrid.scrollLeft;
+    const targetScroll =
+      direction === 'left'
+        ? currentScroll - scrollAmount
+        : currentScroll + scrollAmount;
+
+    authorsGrid.scrollTo({
+      left: targetScroll,
+      behavior: 'smooth',
+    });
+  };
+
+  // Add click events
+  leftButton.addEventListener('click', () => scrollGrid('left'));
+  rightButton.addEventListener('click', () => scrollGrid('right'));
+
+  // Update button visibility based on scroll position
+  const updateButtonVisibility = () => {
+    // Hide left button if at the start
+    leftButton.style.opacity = authorsGrid.scrollLeft <= 10 ? '0.3' : '0.7';
+
+    // Hide right button if at the end
+    const isAtEnd =
+      authorsGrid.scrollLeft + authorsGrid.clientWidth >=
+      authorsGrid.scrollWidth - 10;
+    rightButton.style.opacity = isAtEnd ? '0.3' : '0.7';
+  };
+
+  // Check button visibility on initial load and scroll
+  updateButtonVisibility();
+  authorsGrid.addEventListener('scroll', updateButtonVisibility);
+
+  // Also update on window resize
+  window.addEventListener('resize', updateButtonVisibility);
+};
+
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initBlog);
+document.addEventListener('DOMContentLoaded', () => {
+  initBlog();
+  initAuthorScrollButtons();
+});
