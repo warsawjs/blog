@@ -183,7 +183,12 @@ p {
   font-weight: 500;
   transition: all 0.3s;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav a:after {
@@ -207,7 +212,7 @@ p {
 
 @media (max-width: 768px) {
   .nav ul {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 
@@ -235,6 +240,9 @@ p {
 
   .logo img {
     height: 40px; /* Slightly smaller logo on mobile */
+    width: 40px;
+    object-fit: contain;
+    object-position: left;
   }
 
   .nav {
@@ -247,6 +255,13 @@ p {
     width: 100%;
     padding-right: 30px; /* Add padding to prevent GitHub icon overlap */
     margin: 0; /* Remove any default margins */
+  }
+
+  .nav a {
+    padding: 0.75rem 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: flex-start;
   }
 }
 
@@ -541,6 +556,7 @@ p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
+  contain: layout paint;
 }
 
 .authors-section:before {
@@ -631,17 +647,7 @@ p {
   }
 
   .authors-section .scroll-indicator {
-    width: 30px;
-    height: 30px;
-    animation: pulse 2s infinite ease-in-out;
-  }
-
-  .authors-section .scroll-left {
-    left: 2px;
-  }
-
-  .authors-section .scroll-right {
-    right: 2px;
+    display: none;
   }
 }
 
@@ -728,6 +734,7 @@ p {
   min-width: 200px;
   scroll-snap-align: center;
   flex: 0 0 auto;
+  aspect-ratio: 1 / 1.5;
 }
 
 .author-card:hover {
@@ -776,6 +783,7 @@ p {
   position: relative;
   cursor: pointer;
   transition: all 0.4s ease;
+  aspect-ratio: 1 / 1;
 }
 
 .author-avatar:before {
@@ -959,15 +967,7 @@ p {
   }
 
   .speaker-link {
-    width: 20px;
-    height: 20px;
-    top: 0.4rem;
-    right: 0.4rem;
-  }
-
-  .speaker-link svg {
-    width: 12px;
-    height: 12px;
+    display: none;
   }
 
   .author-card:before {
