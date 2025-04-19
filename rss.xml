@@ -3,14 +3,17 @@
   <channel>
     <title>WarsawJS Blog</title>
     <link>https://blog.warsawjs.com/</link>
-    <description>The latest JavaScript articles, tutorials, and resources from the WarsawJS community</description>
+    <description>The latest JavaScript articles, tutorials, and resources from the WarsawJS community. Stay updated with cutting-edge web development practices, TypeScript insights, and JavaScript ecosystem trends.</description>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Apr 2025 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://blog.warsawjs.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg</url>
+      <url>https://blog.warsawjs.com/public/images/og-image-desktop.jpeg</url>
       <title>WarsawJS Blog</title>
       <link>https://blog.warsawjs.com/</link>
+      <description>WarsawJS Community Blog - JavaScript Knowledge Hub</description>
+      <width>144</width>
+      <height>144</height>
     </image>
     
     <item>
