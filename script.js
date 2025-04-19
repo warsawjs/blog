@@ -1,5 +1,24 @@
 const posts = [
   {
+    title: 'HTML Forms: The Unsung Heroes of Web Development',
+    description:
+      'Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...',
+    link: 'https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454',
+    pubDate: '2025-04-19T10:00:00Z',
+    thumbnail: 'public/images/HTML-Forms.jpeg',
+    author: {
+      name: 'WarsawJS',
+      image: 'public/images/logo-warsawjs-with-dark-text.svg',
+    },
+    categories: [
+      'HTML',
+      'Web Development',
+      'Forms',
+      'Frontend',
+      'Accessibility',
+    ],
+  },
+  {
     title:
       "Bridging Mathematics and Programming: Professor Andrzej Blikle's Lingua Project",
     description:
