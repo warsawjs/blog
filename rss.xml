@@ -17,12 +17,28 @@
     </image>
     
     <item>
+      <title>You're misunderstanding DDD in Angular (and Frontend)</title>
+      <link>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</link>
+      <guid>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</guid>
+      <pubDate>Mon, 05 May 2025 10:00:00 GMT</pubDate>
+      <description>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</description>
+      <author>Tomasz Ducin</author>
+      <content:encoded><![CDATA[<p>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</p>
+<p>Read the full article at: <a href="https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/">https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/</a></p>]]></content:encoded>
+      <category>DDD</category>
+      <category>Angular</category>
+      <category>Frontend</category>
+      <category>Architecture</category>
+      <category>Best Practices</category>
+    </item>
+    
+    <item>
       <title>HTML Forms: The Unsung Heroes of Web Development</title>
       <link>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</link>
       <guid>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</guid>
       <pubDate>Sat, 19 Apr 2025 10:00:00 GMT</pubDate>
       <description>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</description>
-      <author>blog@warsawjs.com (WarsawJS)</author>
+      <author>WarsawJS</author>
       <content:encoded><![CDATA[<p>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454">https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454</a></p>]]></content:encoded>
       <category>HTML</category>
@@ -38,7 +54,7 @@
       <guid>https://blog.warsawjs.com/#bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project</guid>
       <pubDate>Thu, 17 Apr 2025 10:00:00 GMT</pubDate>
       <description>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</description>
-      <author>blog@warsawjs.com (WarsawJS)</author>
+      <author>WarsawJS</author>
       <content:encoded><![CDATA[<p>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</p>
 <p>Read the full article at: <a href="https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd">https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd</a></p>]]></content:encoded>
       <category>Computer Science</category>
@@ -54,7 +70,7 @@
       <guid>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</guid>
       <pubDate>Sat, 12 Apr 2025 09:00:00 GMT</pubDate>
       <description>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</description>
-      <author>blog@warsawjs.com (Piotr Zientara)</author>
+      <author>Piotr Zientara</author>
       <content:encoded><![CDATA[<p>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f">https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f</a></p>]]></content:encoded>
       <category>JavaScript</category>
@@ -70,7 +86,7 @@
       <guid>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</guid>
       <pubDate>Thu, 29 Aug 2024 10:30:00 GMT</pubDate>
       <description>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</description>
-      <author>blog@warsawjs.com (Chojnacki Krzysiek)</author>
+      <author>Chojnacki Krzysiek</author>
       <content:encoded><![CDATA[<p>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2">https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2</a></p>]]></content:encoded>
       <category>Software Design</category>
@@ -84,7 +100,7 @@
       <guid>https://blog.warsawjs.com/#what-is-frontend-architecture</guid>
       <pubDate>Thu, 26 Sep 2024 14:00:00 GMT</pubDate>
       <description>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</description>
-      <author>blog@warsawjs.com (Tomasz Ducin)</author>
+      <author>Tomasz Ducin</author>
       <content:encoded><![CDATA[<p>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</p>
 <p>Read the full article at: <a href="https://ducin.dev/what-is-frontend-architecture">https://ducin.dev/what-is-frontend-architecture</a></p>]]></content:encoded>
       <category>Frontend</category>
@@ -99,7 +115,7 @@
       <guid>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</guid>
       <pubDate>Sun, 21 Jul 2024 10:00:00 GMT</pubDate>
       <description>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</description>
-      <author>blog@warsawjs.com (Iga Trydulska)</author>
+      <author>Iga Trydulska</author>
       <content:encoded><![CDATA[<p>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</p>
 <p>Read the full article at: <a href="https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM">https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM</a></p>]]></content:encoded>
       <category>AI</category>
@@ -114,7 +130,7 @@
       <guid>https://blog.warsawjs.com/#are-you-training-your-models</guid>
       <pubDate>Mon, 15 Jul 2024 10:00:00 GMT</pubDate>
       <description>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</description>
-      <author>blog@warsawjs.com (K-algo)</author>
+      <author>K-algo</author>
       <content:encoded><![CDATA[<p>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</p>
 <p>Read the full article at: <a href="https://algorytmy.substack.com/p/are-you-training-your-models">https://algorytmy.substack.com/p/are-you-training-your-models</a></p>]]></content:encoded>
       <category>AI</category>
@@ -130,7 +146,7 @@
       <guid>https://blog.warsawjs.com/#an-elegant-solution-for-handling-errors-in-express</guid>
       <pubDate>Mon, 15 May 2023 12:00:00 GMT</pubDate>
       <description>Error handling in Express applications can be tricky. This article explores an elegant pattern for centralized error handling that makes your code cleaner and more maintainable...</description>
-      <author>blog@warsawjs.com (Michał Załęcki)</author>
+      <author>Michał Załęcki</author>
       <content:encoded><![CDATA[<p>Error handling in Express applications can be tricky. This article explores an elegant pattern for centralized error handling that makes your code cleaner and more maintainable...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/an-elegant-solution-for-handling-errors-in-express-27332f768c6">https://medium.com/warsawjs/an-elegant-solution-for-handling-errors-in-express-27332f768c6</a></p>]]></content:encoded>
       <category>Express</category>
@@ -144,7 +160,7 @@
       <guid>https://blog.warsawjs.com/#bitwise-operators</guid>
       <pubDate>Mon, 10 Apr 2023 14:30:00 GMT</pubDate>
       <description>Dive into the world of bitwise operators in JavaScript. Learn how these low-level operators work and how they can be used to optimize your code in specific scenarios...</description>
-      <author>blog@warsawjs.com (Yonatan Kra)</author>
+      <author>Yonatan Kra</author>
       <content:encoded><![CDATA[<p>Dive into the world of bitwise operators in JavaScript. Learn how these low-level operators work and how they can be used to optimize your code in specific scenarios...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/bitwise-operators-45e4d8b393db">https://medium.com/warsawjs/bitwise-operators-45e4d8b393db</a></p>]]></content:encoded>
       <category>JavaScript</category>
@@ -158,7 +174,7 @@
       <guid>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-22</guid>
       <pubDate>Sat, 25 Mar 2023 16:45:00 GMT</pubDate>
       <description>Part 2 of the AWS static site hosting series. Discover more advanced configurations and optimizations for your static website infrastructure on AWS...</description>
-      <author>blog@warsawjs.com (Mateusz (mat3e))</author>
+      <author>Mateusz (mat3e)</author>
       <content:encoded><![CDATA[<p>Part 2 of the AWS static site hosting series. Discover more advanced configurations and optimizations for your static website infrastructure on AWS...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-2-2-aa619fc99fc2">https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-2-2-aa619fc99fc2</a></p>]]></content:encoded>
       <category>AWS</category>
@@ -172,7 +188,7 @@
       <guid>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-12</guid>
       <pubDate>Mon, 20 Mar 2023 09:15:00 GMT</pubDate>
       <description>Part 1 of this series explores the AWS services needed to host a static website. From S3 to CloudFront, learn the fundamentals of serverless static site hosting on AWS...</description>
-      <author>blog@warsawjs.com (Mateusz (mat3e))</author>
+      <author>Mateusz (mat3e)</author>
       <content:encoded><![CDATA[<p>Part 1 of this series explores the AWS services needed to host a static website. From S3 to CloudFront, learn the fundamentals of serverless static site hosting on AWS...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-1-2-b811929a9436">https://medium.com/warsawjs/how-many-aws-services-do-you-need-to-host-a-static-webpage-1-2-b811929a9436</a></p>]]></content:encoded>
       <category>AWS</category>
@@ -186,7 +202,7 @@
       <guid>https://blog.warsawjs.com/#warsawjs-mission-statement</guid>
       <pubDate>Sun, 05 Feb 2023 11:20:00 GMT</pubDate>
       <description>Learn about the mission and vision behind WarsawJS. This article outlines our commitment to the JavaScript community and our goals for fostering knowledge sharing and growth...</description>
-      <author>blog@warsawjs.com (Piotr Zientara)</author>
+      <author>Piotr Zientara</author>
       <content:encoded><![CDATA[<p>Learn about the mission and vision behind WarsawJS. This article outlines our commitment to the JavaScript community and our goals for fostering knowledge sharing and growth...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/warsawjs-mission-statement-53fbca973a59">https://medium.com/warsawjs/warsawjs-mission-statement-53fbca973a59</a></p>]]></content:encoded>
       <category>WarsawJS</category>
@@ -200,7 +216,7 @@
       <guid>https://blog.warsawjs.com/#what-are-template-literal-types</guid>
       <pubDate>Wed, 18 Jan 2023 13:40:00 GMT</pubDate>
       <description>Explore TypeScript's powerful template literal types. Learn how they can help you create more precise type definitions and improve type safety in your TypeScript applications...</description>
-      <author>blog@warsawjs.com (Chojnacki Krzysiek)</author>
+      <author>Chojnacki Krzysiek</author>
       <content:encoded><![CDATA[<p>Explore TypeScript's powerful template literal types. Learn how they can help you create more precise type definitions and improve type safety in your TypeScript applications...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/what-are-template-literal-types-9449717b5433">https://medium.com/warsawjs/what-are-template-literal-types-9449717b5433</a></p>]]></content:encoded>
       <category>TypeScript</category>
@@ -214,7 +230,7 @@
       <guid>https://blog.warsawjs.com/#making-developer-voices-heard-avital-tzubeli-at-warsawjs-meetup-78</guid>
       <pubDate>Wed, 10 Mar 2021 18:00:00 GMT</pubDate>
       <description>Discover insights from Avital Tzubeli's presentation at WarsawJS Meetup #78 on effective developer advocacy, community building, and how to make developer voices heard in product development...</description>
-      <author>blog@warsawjs.com (WarsawJS)</author>
+      <author>WarsawJS</author>
       <content:encoded><![CDATA[<p>Discover insights from Avital Tzubeli's presentation at WarsawJS Meetup #78 on effective developer advocacy, community building, and how to make developer voices heard in product development...</p>
 <p>Read the full article at: <a href="https://medium.com/warsawjs/behind-the-scenes-how-push-notifications-scale-to-millions-of-users-4651289e9d00">https://medium.com/warsawjs/behind-the-scenes-how-push-notifications-scale-to-millions-of-users-4651289e9d00</a></p>]]></content:encoded>
       <category>Developer Relations</category>

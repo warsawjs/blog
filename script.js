@@ -1,5 +1,25 @@
 const posts = [
   {
+    title: "You're misunderstanding DDD in Angular (and Frontend)",
+    description:
+      "Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'",
+    link: 'https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/',
+    pubDate: '2025-05-05T10:00:00Z',
+    thumbnail: 'public/images/youre-misunderstanding-ddd.jpeg',
+    author: {
+      name: 'Tomasz Ducin',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/tomasz-ducin.jpg',
+    },
+    categories: [
+      'DDD',
+      'Angular',
+      'Frontend',
+      'Architecture',
+      'Best Practices',
+    ],
+  },
+  {
     title: 'HTML Forms: The Unsung Heroes of Web Development',
     description:
       'Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...',
