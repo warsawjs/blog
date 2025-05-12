@@ -1,5 +1,26 @@
 const posts = [
   {
+    title:
+      'Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?',
+    description:
+      'Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.',
+    link: 'https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8',
+    pubDate: '2025-05-12T10:00:00Z',
+    thumbnail: 'public/images/Do-AI-Tools-Equalize.jpeg',
+    author: {
+      name: 'Piotr Zientara',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
+    },
+    categories: [
+      'AI',
+      'Programming',
+      'Software Development',
+      'Technology',
+      'Education',
+    ],
+  },
+  {
     title: "You're misunderstanding DDD in Angular (and Frontend)",
     description:
       "Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'",

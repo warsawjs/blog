@@ -5,7 +5,7 @@
     <link>https://blog.warsawjs.com/</link>
     <description>The latest JavaScript articles, tutorials, and resources from the WarsawJS community. Stay updated with cutting-edge web development practices, TypeScript insights, and JavaScript ecosystem trends.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Apr 2025 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 May 2025 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://blog.warsawjs.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://blog.warsawjs.com/public/images/og-image-desktop.jpeg</url>
@@ -15,6 +15,22 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?</title>
+      <link>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</link>
+      <guid>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</guid>
+      <pubDate>Mon, 12 May 2025 10:00:00 GMT</pubDate>
+      <description>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</p>
+<p>Read the full article at: <a href="https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8">https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8</a></p>]]></content:encoded>
+      <category>AI</category>
+      <category>Programming</category>
+      <category>Software Development</category>
+      <category>Technology</category>
+      <category>Education</category>
+    </item>
     
     <item>
       <title>You're misunderstanding DDD in Angular (and Frontend)</title>
