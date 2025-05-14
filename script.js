@@ -1,5 +1,24 @@
 const posts = [
   {
+    title: 'Legacy Code: How to Approach',
+    description:
+      'Sławomir Grochowski shares strategies for handling legacy code projects, focusing on comprehensive review of user needs and system solutions. Learn how to effectively analyze documentation, gather information from people familiar with the system, and use data to identify unused functionalities and prioritize critical elements in your approach to legacy code.',
+    link: 'https://slawomir-grochowski.com/posts/05-legacy-code-how-to-approach.html',
+    pubDate: '2024-06-22T10:00:00Z',
+    thumbnail: 'public/images/legacy-code.jpeg',
+    author: {
+      name: 'Sławomir Grochowski',
+      image: 'public/images/slawomir-grochowski.jpeg',
+    },
+    categories: [
+      'Legacy Code',
+      'Software Development',
+      'Documentation',
+      'Code Maintenance',
+      'Best Practices',
+    ],
+  },
+  {
     title:
       'Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?',
     description:
@@ -341,6 +360,10 @@ const getSpeakerProfileUrl = (authorName) => {
 
   if (authorName === 'Piotr Zientara') {
     return 'https://warsawjs.com/speakers/piotr-zientara';
+  }
+
+  if (authorName === 'Sławomir Grochowski') {
+    return 'https://slawomir-grochowski.com/';
   }
 
   if (

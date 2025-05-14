@@ -5,7 +5,7 @@
     <link>https://blog.warsawjs.com/</link>
     <description>The latest JavaScript articles, tutorials, and resources from the WarsawJS community. Stay updated with cutting-edge web development practices, TypeScript insights, and JavaScript ecosystem trends.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2024 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://blog.warsawjs.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://blog.warsawjs.com/public/images/og-image-desktop.jpeg</url>
@@ -15,6 +15,22 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>Legacy Code: How to Approach</title>
+      <link>https://blog.warsawjs.com/#legacy-code-how-to-approach</link>
+      <guid>https://blog.warsawjs.com/#legacy-code-how-to-approach</guid>
+      <pubDate>Sat, 22 Jun 2024 10:00:00 GMT</pubDate>
+      <description>Sławomir Grochowski shares strategies for handling legacy code projects, focusing on comprehensive review of user needs and system solutions. Learn how to effectively analyze documentation, gather information from people familiar with the system, and use data to identify unused functionalities and prioritize critical elements in your approach to legacy code.</description>
+      <author>Sławomir Grochowski</author>
+      <content:encoded><![CDATA[<p>Sławomir Grochowski shares strategies for handling legacy code projects, focusing on comprehensive review of user needs and system solutions. Learn how to effectively analyze documentation, gather information from people familiar with the system, and use data to identify unused functionalities and prioritize critical elements in your approach to legacy code.</p>
+<p>Read the full article at: <a href="https://slawomir-grochowski.com/posts/05-legacy-code-how-to-approach.html">https://slawomir-grochowski.com/posts/05-legacy-code-how-to-approach.html</a></p>]]></content:encoded>
+      <category>Legacy Code</category>
+      <category>Software Development</category>
+      <category>Documentation</category>
+      <category>Code Maintenance</category>
+      <category>Best Practices</category>
+    </item>
 
     <item>
       <title>Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?</title>
