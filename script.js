@@ -1,5 +1,19 @@
 const posts = [
   {
+    title: 'How do you serve APIs for humans when bots are everywhere?',
+    description:
+      'Jakub Wołyko shares his battle with 39,200 bot requests per 24h. The challenge: API updates once daily, bots hit it every second. The journey through 4 iterations to find the right balance between protection and accessibility.',
+    link: 'https://jakubwolynko.eu/blog/202510-cloudflare-and-automation-challange/',
+    pubDate: '2025-06-15T10:00:00Z',
+    thumbnail: 'public/images/api-bot-challange.jpeg',
+    author: {
+      name: 'Jakub Wołynko',
+      image:
+        'https://media.hachyderm.io/accounts/avatars/114/596/935/430/204/465/original/398a8adc5c54e8ea.jpg',
+    },
+    categories: ['API', 'Security', 'Cloudflare', 'Technology', 'Education'],
+  },
+  {
     title: 'Legacy Code: How to Approach',
     description:
       'Sławomir Grochowski shares strategies for handling legacy code projects, focusing on comprehensive review of user needs and system solutions. Learn how to effectively analyze documentation, gather information from people familiar with the system, and use data to identify unused functionalities and prioritize critical elements in your approach to legacy code.',
@@ -371,6 +385,10 @@ const getSpeakerProfileUrl = (authorName) => {
     authorName === 'Krzysiek Chojnacki'
   ) {
     return 'https://warsawjs.com/speakers/krzysiek-chojnacki';
+  }
+
+  if (authorName === 'Jakub Wołynko') {
+    return 'https://warsawjs.com/speakers/jakub-wolynko';
   }
 
   // Default case: link to WarsawJS speakers profile
