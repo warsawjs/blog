@@ -1,15 +1,35 @@
 const posts = [
   {
+    title: 'Meaningful Tests: Human Hubris vs. AI',
+    description:
+      'Yontan Kra explores the evolving relationship between human developers and AI in software testing. A thought-provoking analysis of how AI is changing our approach to writing meaningful tests, and what this means for the future of quality assurance in software development.',
+    link: 'https://yonatankra.com/meaningful-tests-human-hubris-vs-ai/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2025-09-09T10:00:00Z',
+    thumbnail: 'public/images/meaningful-tests-ai.jpeg',
+    author: {
+      name: 'Yonatan Kra',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/yonatan-kra.jpg',
+    },
+    categories: [
+      'Testing',
+      'AI',
+      'Software Development',
+      'Quality Assurance',
+      'Technology',
+    ],
+  },
+  {
     title: 'How do you serve APIs for humans when bots are everywhere?',
     description:
       'Jakub Wołyko shares his battle with 39,200 bot requests per 24h. The challenge: API updates once daily, bots hit it every second. The journey through 4 iterations to find the right balance between protection and accessibility.',
-    link: 'https://jakubwolynko.eu/blog/202510-cloudflare-and-automation-challange/',
+    link: 'https://jakubwolynko.eu/blog/202510-cloudflare-and-automation-challange/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2025-06-15T10:00:00Z',
     thumbnail: 'public/images/api-bot-challange.jpeg',
     author: {
       name: 'Jakub Wołynko',
       image:
-        'https://media.hachyderm.io/accounts/avatars/114/596/935/430/204/465/original/398a8adc5c54e8ea.jpg',
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/jakub-wolynko.jpg',
     },
     categories: ['API', 'Security', 'Cloudflare', 'Technology', 'Education'],
   },
@@ -17,7 +37,7 @@ const posts = [
     title: 'Legacy Code: How to Approach',
     description:
       'Sławomir Grochowski shares strategies for handling legacy code projects, focusing on comprehensive review of user needs and system solutions. Learn how to effectively analyze documentation, gather information from people familiar with the system, and use data to identify unused functionalities and prioritize critical elements in your approach to legacy code.',
-    link: 'https://slawomir-grochowski.com/posts/05-legacy-code-how-to-approach.html',
+    link: 'https://slawomir-grochowski.com/posts/05-legacy-code-how-to-approach.html?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2024-06-22T10:00:00Z',
     thumbnail: 'public/images/legacy-code.jpeg',
     author: {
@@ -37,7 +57,7 @@ const posts = [
       'Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?',
     description:
       'Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.',
-    link: 'https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8',
+    link: 'https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2025-05-12T10:00:00Z',
     thumbnail: 'public/images/Do-AI-Tools-Equalize.jpeg',
     author: {
@@ -57,7 +77,7 @@ const posts = [
     title: "You're misunderstanding DDD in Angular (and Frontend)",
     description:
       "Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'",
-    link: 'https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/',
+    link: 'https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2025-05-05T10:00:00Z',
     thumbnail: 'public/images/youre-misunderstanding-ddd.jpeg',
     author: {
@@ -116,7 +136,7 @@ const posts = [
     title: 'What is Frontend Architecture?',
     description:
       'Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...',
-    link: 'https://ducin.dev/what-is-frontend-architecture',
+    link: 'https://ducin.dev/what-is-frontend-architecture?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2024-09-26T14:00:00Z',
     thumbnail: 'public/images/blog-it-javascript-frameworks.jpeg',
     author: {
@@ -135,7 +155,7 @@ const posts = [
     title: 'Are You Training Your Models?',
     description:
       'Many misunderstand AI model training, believing it\'s as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...',
-    link: 'https://algorytmy.substack.com/p/are-you-training-your-models',
+    link: 'https://algorytmy.substack.com/p/are-you-training-your-models?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2024-07-15T10:00:00Z',
     thumbnail: 'public/images/Jul 15, 2024.jpeg',
     author: {
@@ -210,7 +230,7 @@ const posts = [
     title: 'Et in Arcadia ego: AI in modeling (ft. Lalaland.ai)',
     description:
       'AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...',
-    link: 'https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM',
+    link: 'https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2024-07-21T10:00:00Z',
     thumbnail: 'public/images/lalaland.jpg',
     author: {
