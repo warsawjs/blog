@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.warsawjs.com/</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2025-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Individual blog posts -->
+  <url>
+    <loc>https://blog.warsawjs.com/#meaningful-tests-human-hubris-vs-ai</loc>
+    <lastmod>2025-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.warsawjs.com/#how-do-you-serve-apis-for-humans-when-bots-are-everywhere</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.warsawjs.com/#legacy-code-how-to-approach</loc>
+    <lastmod>2024-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</loc>
     <lastmod>2025-05-12</lastmod>
