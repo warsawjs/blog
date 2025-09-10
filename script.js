@@ -582,6 +582,7 @@ const initBlog = () => {
 
   // Only proceed if we found the posts grid
   if (!postsGrid) {
+    // eslint-disable-next-line no-console
     console.error('Posts grid element not found');
     return;
   }
@@ -679,7 +680,7 @@ const initBlog = () => {
   });
 
   // Handle back/forward browser navigation
-  window.addEventListener('popstate', function (e) {
+  window.addEventListener('popstate', function () {
     const hash = window.location.hash.replace('#', '');
     if (hash) {
       openPostPopup(hash);
@@ -747,6 +748,7 @@ const initBlog = () => {
         }
       });
     } else {
+      // eslint-disable-next-line no-console
       console.warn('No author cards found in the document');
     }
   };
@@ -828,6 +830,7 @@ const initBlog = () => {
   // Filter by author function
   window.filterByAuthor = (authorName) => {
     if (!authorName) {
+      // eslint-disable-next-line no-console
       console.error('No author name provided to filter');
       return;
     }
@@ -1005,6 +1008,7 @@ const initAuthorScrollButtons = () => {
   const rightButton = document.querySelector('.scroll-indicator.scroll-right');
 
   if (!authorsGrid || !leftButton || !rightButton) {
+    // eslint-disable-next-line no-console
     console.warn('Author grid or scroll buttons not found');
     return;
   }
