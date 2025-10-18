@@ -3,7 +3,7 @@ const posts = [
     title: "The Strategic Art of Asking 'Dumb' Questions",
     description:
       "Why the best developers aren't afraid to look foolish at tech conferences. Learn the difference between valuable curiosity and ego-driven Q&A spam.",
-    link: 'https://piotrzientara.pl/how-asking-dumb-questions-secretly-boosts-your-dev-career/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    link: 'https://piotrzientara.pl/the-strategic-art-of-asking-dumb-questions/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2025-10-18T16:22:00Z',
     thumbnail: 'public/images/asking-dumb-questions.jpeg',
     author: {
