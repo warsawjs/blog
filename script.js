@@ -1,5 +1,25 @@
 const posts = [
   {
+    title: "The Strategic Art of Asking 'Dumb' Questions",
+    description:
+      "Why the best developers aren't afraid to look foolish at tech conferences. Learn the difference between valuable curiosity and ego-driven Q&A spam.",
+    link: 'https://piotrzientara.pl/how-asking-dumb-questions-secretly-boosts-your-dev-career/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2025-10-18T16:22:00Z',
+    thumbnail: 'public/images/asking-dumb-questions.jpeg',
+    author: {
+      name: 'Piotr Zientara',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
+    },
+    categories: [
+      'Community',
+      'Conference',
+      'Communication',
+      'Career Development',
+      'WarsawJS',
+    ],
+  },
+  {
     title: 'Meaningful Tests: Human Hubris vs. AI',
     description:
       'Yontan Kra explores the evolving relationship between human developers and AI in software testing. A thought-provoking analysis of how AI is changing our approach to writing meaningful tests, and what this means for the future of quality assurance in software development.',
