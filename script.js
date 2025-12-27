@@ -1,5 +1,18 @@
 const posts = [
   {
+    title: 'The David Budden Autopsy',
+    description:
+      'Heapwolf provides an in-depth analysis and examination of the David Budden case, offering insights and perspectives on this important topic.',
+    link: 'https://substack.com/inbox/post/182634432?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2025-12-27T20:22:00Z',
+    thumbnail: 'public/images/The-David-Budden-Autopsy.jpeg',
+    author: {
+      name: 'Heapwolf',
+      image: 'public/images/heapwolf.jpg',
+    },
+    categories: ['Analysis', 'Technology', 'Software Development'],
+  },
+  {
     title: "The Strategic Art of Asking 'Dumb' Questions",
     description:
       "Why the best developers aren't afraid to look foolish at tech conferences. Learn the difference between valuable curiosity and ego-driven Q&A spam.",
@@ -394,6 +407,10 @@ const getSpeakerProfileUrl = (authorName) => {
 
   if (authorName === 'K-algo') {
     return 'https://algorytmy.substack.com/';
+  }
+
+  if (authorName === 'Heapwolf') {
+    return 'https://substack.com/inbox/post/182634432';
   }
 
   if (authorName === 'Mateusz (mat3e)') {
