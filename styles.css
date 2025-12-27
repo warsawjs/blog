@@ -927,8 +927,8 @@ p {
 @media (max-width: 480px) {
   .authors-section {
     border-radius: 12px;
-    padding: 1rem 0.5rem 0.75rem;
-    margin: 1rem 1rem 1.5rem;
+    padding: 1rem 0.75rem 0.75rem;
+    margin: 1rem 0.5rem 1.5rem;
   }
 
   .authors-section h2 {
@@ -937,34 +937,48 @@ p {
   }
 
   .authors-grid {
-    gap: 0.6rem;
-    padding: 0 0.25rem;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .author-card {
-    padding: 0.5rem 0.1rem 0.4rem;
+    padding: 0.75rem 0.5rem 0.6rem;
     border-radius: 8px;
     min-width: auto;
     aspect-ratio: 1 / 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .author-avatar {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0.4rem;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 0.5rem;
     border-width: 2px;
+    flex-shrink: 0;
   }
 
   .author-name {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     margin-bottom: 0;
     font-weight: 700;
-    white-space: nowrap;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    padding: 0 0.25rem;
+    line-height: 1.2;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 0.1rem;
-    line-height: 1.1;
   }
 
   .speaker-link {
@@ -983,31 +997,46 @@ p {
 @media (max-width: 359px) {
   .authors-section {
     margin: 1rem 0.5rem 1.5rem;
-    padding: 0.75rem 0.25rem 0.5rem;
+    padding: 0.75rem 0.5rem 0.5rem;
   }
 
   .authors-grid {
-    gap: 0.3rem;
-    padding: 0;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .author-card {
-    padding: 0.4rem 0.05rem 0.3rem;
+    padding: 0.6rem 0.4rem 0.5rem;
     min-width: auto;
     aspect-ratio: 1 / 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .author-avatar {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.3rem;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 0.4rem;
     border-width: 2px;
+    flex-shrink: 0;
   }
 
   .author-name {
-    font-size: 0.6rem;
-    line-height: 1;
+    font-size: 0.65rem;
+    line-height: 1.2;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 0.2rem;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
