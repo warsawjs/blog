@@ -2,7 +2,7 @@ const posts = [
   {
     title: 'The David Budden Autopsy',
     description:
-      'Heapwolf provides an in-depth analysis and examination of the David Budden case, offering insights and perspectives on this important topic.',
+      'Software is built on layers of trust, but trust collapses the moment syntax is mistaken for meaning. This essay examines a recent, very public failure where formal verification and AI produced a proof that was perfectly valid—and entirely empty. It is not a story about bad tools, but about good tools used without epistemic discipline. When green checkmarks replace understanding, correctness becomes theater, and mathematics quietly exits the stage.',
     link: 'https://substack.com/inbox/post/182634432?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2025-12-27T20:22:00Z',
     thumbnail: 'public/images/The-David-Budden-Autopsy.jpeg',
