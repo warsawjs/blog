@@ -6,7 +6,7 @@
     <title>WarsawJS Blog - Community Articles</title>
     <meta
       name="description"
-      content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community"
+      content="Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development."
     />
     <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
 
@@ -238,7 +238,7 @@
     <meta property="og:title" content="WarsawJS Blog - Community Articles" />
     <meta
       property="og:description"
-      content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community"
+      content="Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development."
     />
     <meta
       property="og:image"
@@ -255,7 +255,7 @@
     <meta name="twitter:title" content="WarsawJS Blog - Community Articles" />
     <meta
       name="twitter:description"
-      content="The latest JavaScript articles, tutorials, and resources from the WarsawJS community"
+      content="Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development."
     />
     <meta
       name="twitter:image"
@@ -276,6 +276,70 @@
       title="WarsawJS Blog RSS Feed"
       href="rss.xml"
     />
+
+    <!-- Structured Data (JSON-LD) for SEO and AI Discoverability -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://warsawjs.com/#organization",
+            "name": "WarsawJS",
+            "url": "https://warsawjs.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://blog.warsawjs.com/public/images/logo-warsawjs-with-dark-text.svg",
+              "width": 120,
+              "height": 50
+            },
+            "sameAs": [
+              "https://medium.com/warsawjs",
+              "https://github.com/warsawjs",
+              "https://www.meetup.com/WarsawJS/"
+            ],
+            "description": "WarsawJS is Poland's largest JavaScript community, organizing meetups, workshops, and events for developers since 2014."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://blog.warsawjs.com/#website",
+            "url": "https://blog.warsawjs.com",
+            "name": "WarsawJS Blog",
+            "description": "Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community.",
+            "publisher": {
+              "@id": "https://warsawjs.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://blog.warsawjs.com/#webpage",
+            "url": "https://blog.warsawjs.com",
+            "name": "WarsawJS Blog - Community Articles",
+            "description": "Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development.",
+            "isPartOf": {
+              "@id": "https://blog.warsawjs.com/#website"
+            },
+            "about": {
+              "@id": "https://warsawjs.com/#organization"
+            },
+            "inLanguage": "en-US",
+            "datePublished": "2023-01-01",
+            "dateModified": "2025-01-19",
+            "mainEntity": {
+              "@type": "Blog",
+              "@id": "https://blog.warsawjs.com/#blog",
+              "name": "WarsawJS Blog",
+              "description": "Technical articles, tutorials, and insights from the WarsawJS JavaScript community covering React, Node.js, TypeScript, AWS, and modern web development practices.",
+              "publisher": {
+                "@id": "https://warsawjs.com/#organization"
+              },
+              "blogPost": []
+            }
+          }
+        ]
+      }
+    </script>
 
     <!-- Deferred non-critical CSS -->
     <link
@@ -375,10 +439,37 @@
       <div class="hero">
         <h1 class="title">WarsawJS Blog</h1>
         <p class="subtitle">
-          The latest JavaScript articles, tutorials, and resources from the
-          WarsawJS community
+          Discover JavaScript tutorials, technical articles, and expert insights
+          from the WarsawJS community
         </p>
       </div>
+
+      <!-- About Section -->
+      <section class="about-section" aria-labelledby="about-heading">
+        <h2 id="about-heading"><span>About WarsawJS Blog</span></h2>
+        <div class="about-content">
+          <p>
+            Welcome to the official blog of <strong>WarsawJS</strong>, Poland's
+            largest JavaScript community. Since 2014, we've been bringing
+            together developers passionate about JavaScript, TypeScript, React,
+            Node.js, and modern web technologies through monthly meetups,
+            workshops, and conferences in Warsaw.
+          </p>
+          <p>
+            Our blog features technical articles, tutorials, and insights from
+            community members and industry experts. Whether you're looking to
+            learn about frontend architecture, backend development with Node.js,
+            cloud deployment on AWS, or the latest trends in AI-assisted coding,
+            you'll find valuable content here.
+          </p>
+          <p>
+            <strong>Topics we cover:</strong> JavaScript fundamentals,
+            TypeScript best practices, React and Angular frameworks, Node.js and
+            Express, AWS cloud services, software architecture, testing
+            strategies, and developer career growth.
+          </p>
+        </div>
+      </section>
 
       <!-- Authors Section -->
       <div class="authors-section">
@@ -834,9 +925,13 @@
         </div>
       </div>
 
-      <div id="posts-grid" class="posts-grid">
-        <!-- Blog posts will be inserted here by JavaScript -->
-      </div>
+      <!-- Articles Section -->
+      <section class="articles-section" aria-labelledby="articles-heading">
+        <h2 id="articles-heading"><span>Latest Articles</span></h2>
+        <div id="posts-grid" class="posts-grid">
+          <!-- Blog posts will be inserted here by JavaScript -->
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
