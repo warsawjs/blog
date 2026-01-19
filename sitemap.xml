@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.warsawjs.com/</loc>
-    <lastmod>2025-10-18</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Individual blog posts -->
+  <url>
+    <loc>https://blog.warsawjs.com/#the-david-budden-autopsy</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://blog.warsawjs.com/#the-strategic-art-of-asking-dumb-questions</loc>
     <lastmod>2025-10-18</lastmod>
@@ -26,14 +32,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.warsawjs.com/#legacy-code-how-to-approach</loc>
-    <lastmod>2024-06-22</lastmod>
+    <loc>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</loc>
+    <lastmod>2025-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</loc>
-    <lastmod>2025-05-12</lastmod>
+    <loc>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</loc>
+    <lastmod>2025-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,8 +56,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</loc>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.warsawjs.com/#what-is-frontend-architecture</loc>
     <lastmod>2024-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</loc>
+    <lastmod>2024-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</loc>
+    <lastmod>2024-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,8 +86,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</loc>
-    <lastmod>2025-04-12</lastmod>
+    <loc>https://blog.warsawjs.com/#legacy-code-how-to-approach</loc>
+    <lastmod>2024-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -80,20 +104,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-12</loc>
-    <lastmod>2023-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</loc>
-    <lastmod>2024-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-22</loc>
     <lastmod>2023-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-12</loc>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -110,20 +128,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</loc>
-    <lastmod>2024-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://blog.warsawjs.com/#making-developer-voices-heard-avital-tzubeli-at-warsawjs-meetup-78</loc>
     <lastmod>2021-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</loc>
-    <lastmod>2025-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

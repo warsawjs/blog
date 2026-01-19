@@ -3,9 +3,9 @@
   <channel>
     <title>WarsawJS Blog</title>
     <link>https://blog.warsawjs.com/</link>
-    <description>The latest JavaScript articles, tutorials, and resources from the WarsawJS community. Stay updated with cutting-edge web development practices, TypeScript insights, and JavaScript ecosystem trends.</description>
+    <description>Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2024 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 20:22:00 GMT</lastBuildDate>
     <atom:link href="https://blog.warsawjs.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://blog.warsawjs.com/public/images/og-image-desktop.jpeg</url>
@@ -15,6 +15,208 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>The David Budden Autopsy</title>
+      <link>https://blog.warsawjs.com/#the-david-budden-autopsy</link>
+      <guid>https://blog.warsawjs.com/#the-david-budden-autopsy</guid>
+      <pubDate>Sat, 27 Dec 2025 20:22:00 GMT</pubDate>
+      <description>Software is built on layers of trust, but trust collapses the moment syntax is mistaken for meaning. This essay examines a recent, very public failure where formal verification and AI produced a proof that was perfectly valid—and entirely empty. It is not a story about bad tools, but about good tools used without epistemic discipline. When green checkmarks replace understanding, correctness becomes theater, and mathematics quietly exits the stage.</description>
+      <author>Heapwolf</author>
+      <content:encoded><![CDATA[<p>Software is built on layers of trust, but trust collapses the moment syntax is mistaken for meaning. This essay examines a recent, very public failure where formal verification and AI produced a proof that was perfectly valid—and entirely empty. It is not a story about bad tools, but about good tools used without epistemic discipline. When green checkmarks replace understanding, correctness becomes theater, and mathematics quietly exits the stage.</p>
+<p>Read the full article at: <a href="https://substack.com/inbox/post/182634432">https://substack.com/inbox/post/182634432</a></p>]]></content:encoded>
+      <category>Analysis</category>
+      <category>Technology</category>
+      <category>Software Development</category>
+    </item>
+
+    <item>
+      <title>The Strategic Art of Asking 'Dumb' Questions</title>
+      <link>https://blog.warsawjs.com/#the-strategic-art-of-asking-dumb-questions</link>
+      <guid>https://blog.warsawjs.com/#the-strategic-art-of-asking-dumb-questions</guid>
+      <pubDate>Sat, 18 Oct 2025 16:22:00 GMT</pubDate>
+      <description>Why the best developers aren't afraid to look foolish at tech conferences. Learn the difference between valuable curiosity and ego-driven Q&amp;A spam.</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>Why the best developers aren't afraid to look foolish at tech conferences. Learn the difference between valuable curiosity and ego-driven Q&A spam.</p>
+<p>Read the full article at: <a href="https://piotrzientara.pl/the-strategic-art-of-asking-dumb-questions/">https://piotrzientara.pl/the-strategic-art-of-asking-dumb-questions/</a></p>]]></content:encoded>
+      <category>Community</category>
+      <category>Conference</category>
+      <category>Communication</category>
+      <category>Career Development</category>
+      <category>WarsawJS</category>
+    </item>
+
+    <item>
+      <title>Meaningful Tests: Human Hubris vs. AI</title>
+      <link>https://blog.warsawjs.com/#meaningful-tests-human-hubris-vs-ai</link>
+      <guid>https://blog.warsawjs.com/#meaningful-tests-human-hubris-vs-ai</guid>
+      <pubDate>Tue, 09 Sep 2025 10:00:00 GMT</pubDate>
+      <description>Yontan Kra explores the evolving relationship between human developers and AI in software testing. A thought-provoking analysis of how AI is changing our approach to writing meaningful tests, and what this means for the future of quality assurance in software development.</description>
+      <author>Yonatan Kra</author>
+      <content:encoded><![CDATA[<p>Yontan Kra explores the evolving relationship between human developers and AI in software testing. A thought-provoking analysis of how AI is changing our approach to writing meaningful tests, and what this means for the future of quality assurance in software development.</p>
+<p>Read the full article at: <a href="https://yonatankra.com/meaningful-tests-human-hubris-vs-ai/">https://yonatankra.com/meaningful-tests-human-hubris-vs-ai/</a></p>]]></content:encoded>
+      <category>Testing</category>
+      <category>AI</category>
+      <category>Software Development</category>
+      <category>Quality Assurance</category>
+      <category>Technology</category>
+    </item>
+
+    <item>
+      <title>How do you serve APIs for humans when bots are everywhere?</title>
+      <link>https://blog.warsawjs.com/#how-do-you-serve-apis-for-humans-when-bots-are-everywhere</link>
+      <guid>https://blog.warsawjs.com/#how-do-you-serve-apis-for-humans-when-bots-are-everywhere</guid>
+      <pubDate>Sun, 15 Jun 2025 10:00:00 GMT</pubDate>
+      <description>Jakub Wołyko shares his battle with 39,200 bot requests per 24h. The challenge: API updates once daily, bots hit it every second. The journey through 4 iterations to find the right balance between protection and accessibility.</description>
+      <author>Jakub Wołynko</author>
+      <content:encoded><![CDATA[<p>Jakub Wołyko shares his battle with 39,200 bot requests per 24h. The challenge: API updates once daily, bots hit it every second. The journey through 4 iterations to find the right balance between protection and accessibility.</p>
+<p>Read the full article at: <a href="https://jakubwolynko.eu/blog/202510-cloudflare-and-automation-challange/">https://jakubwolynko.eu/blog/202510-cloudflare-and-automation-challange/</a></p>]]></content:encoded>
+      <category>API</category>
+      <category>Security</category>
+      <category>Cloudflare</category>
+      <category>Technology</category>
+      <category>Education</category>
+    </item>
+
+    <item>
+      <title>Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?</title>
+      <link>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</link>
+      <guid>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</guid>
+      <pubDate>Mon, 12 May 2025 10:00:00 GMT</pubDate>
+      <description>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</p>
+<p>Read the full article at: <a href="https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8">https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8</a></p>]]></content:encoded>
+      <category>AI</category>
+      <category>Programming</category>
+      <category>Software Development</category>
+      <category>Technology</category>
+      <category>Education</category>
+    </item>
+
+    <item>
+      <title>You're misunderstanding DDD in Angular (and Frontend)</title>
+      <link>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</link>
+      <guid>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</guid>
+      <pubDate>Mon, 05 May 2025 10:00:00 GMT</pubDate>
+      <description>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</description>
+      <author>Tomasz Ducin</author>
+      <content:encoded><![CDATA[<p>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</p>
+<p>Read the full article at: <a href="https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/">https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/</a></p>]]></content:encoded>
+      <category>DDD</category>
+      <category>Angular</category>
+      <category>Frontend</category>
+      <category>Architecture</category>
+      <category>Best Practices</category>
+    </item>
+
+    <item>
+      <title>HTML Forms: The Unsung Heroes of Web Development</title>
+      <link>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</link>
+      <guid>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</guid>
+      <pubDate>Sat, 19 Apr 2025 10:00:00 GMT</pubDate>
+      <description>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</description>
+      <author>WarsawJS</author>
+      <content:encoded><![CDATA[<p>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</p>
+<p>Read the full article at: <a href="https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454">https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454</a></p>]]></content:encoded>
+      <category>HTML</category>
+      <category>Web Development</category>
+      <category>Forms</category>
+      <category>Frontend</category>
+      <category>Accessibility</category>
+    </item>
+
+    <item>
+      <title>Bridging Mathematics and Programming: Professor Andrzej Blikle's Lingua Project</title>
+      <link>https://blog.warsawjs.com/#bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project</link>
+      <guid>https://blog.warsawjs.com/#bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project</guid>
+      <pubDate>Thu, 17 Apr 2025 10:00:00 GMT</pubDate>
+      <description>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</description>
+      <author>WarsawJS</author>
+      <content:encoded><![CDATA[<p>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</p>
+<p>Read the full article at: <a href="https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd">https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd</a></p>]]></content:encoded>
+      <category>Computer Science</category>
+      <category>Mathematics</category>
+      <category>Programming Languages</category>
+      <category>Research</category>
+      <category>Denotational Semantics</category>
+    </item>
+
+    <item>
+      <title>Unleashing Developer Potential: Introducing WarsawJS JAM</title>
+      <link>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</link>
+      <guid>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</guid>
+      <pubDate>Sat, 12 Apr 2025 09:00:00 GMT</pubDate>
+      <description>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</p>
+<p>Read the full article at: <a href="https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f">https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f</a></p>]]></content:encoded>
+      <category>JavaScript</category>
+      <category>Hackathons</category>
+      <category>Networking</category>
+      <category>Community</category>
+      <category>Programming</category>
+    </item>
+
+    <item>
+      <title>What is Frontend Architecture?</title>
+      <link>https://blog.warsawjs.com/#what-is-frontend-architecture</link>
+      <guid>https://blog.warsawjs.com/#what-is-frontend-architecture</guid>
+      <pubDate>Thu, 26 Sep 2024 14:00:00 GMT</pubDate>
+      <description>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</description>
+      <author>Tomasz Ducin</author>
+      <content:encoded><![CDATA[<p>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</p>
+<p>Read the full article at: <a href="https://ducin.dev/what-is-frontend-architecture">https://ducin.dev/what-is-frontend-architecture</a></p>]]></content:encoded>
+      <category>Frontend</category>
+      <category>Architecture</category>
+      <category>Web Development</category>
+      <category>Best Practices</category>
+    </item>
+
+    <item>
+      <title>Simplicity in the Spectrum: Identifying and Overcoming Overengineering</title>
+      <link>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</link>
+      <guid>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</guid>
+      <pubDate>Thu, 29 Aug 2024 10:30:00 GMT</pubDate>
+      <description>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</description>
+      <author>Chojnacki Krzysiek</author>
+      <content:encoded><![CDATA[<p>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</p>
+<p>Read the full article at: <a href="https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2">https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2</a></p>]]></content:encoded>
+      <category>Software Design</category>
+      <category>Best Practices</category>
+      <category>Simplicity</category>
+    </item>
+
+    <item>
+      <title>Et in Arcadia ego: AI in modeling (ft. Lalaland.ai)</title>
+      <link>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</link>
+      <guid>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</guid>
+      <pubDate>Sun, 21 Jul 2024 10:00:00 GMT</pubDate>
+      <description>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</description>
+      <author>Iga Trydulska</author>
+      <content:encoded><![CDATA[<p>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</p>
+<p>Read the full article at: <a href="https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM">https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM</a></p>]]></content:encoded>
+      <category>AI</category>
+      <category>Fashion</category>
+      <category>Technology</category>
+      <category>Ethics</category>
+    </item>
+
+    <item>
+      <title>Are You Training Your Models?</title>
+      <link>https://blog.warsawjs.com/#are-you-training-your-models</link>
+      <guid>https://blog.warsawjs.com/#are-you-training-your-models</guid>
+      <pubDate>Mon, 15 Jul 2024 10:00:00 GMT</pubDate>
+      <description>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</description>
+      <author>K-algo</author>
+      <content:encoded><![CDATA[<p>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</p>
+<p>Read the full article at: <a href="https://algorytmy.substack.com/p/are-you-training-your-models">https://algorytmy.substack.com/p/are-you-training-your-models</a></p>]]></content:encoded>
+      <category>AI</category>
+      <category>Machine Learning</category>
+      <category>LLM</category>
+      <category>Model Training</category>
+      <category>Workflow</category>
+    </item>
 
     <item>
       <title>Legacy Code: How to Approach</title>
@@ -33,146 +235,6 @@
     </item>
 
     <item>
-      <title>Do AI Tools Equalize Programmer Skills or Amplify Existing Differences?</title>
-      <link>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</link>
-      <guid>https://blog.warsawjs.com/#do-ai-tools-equalize-programmer-skills-or-amplify-existing-differences</guid>
-      <pubDate>Mon, 12 May 2025 10:00:00 GMT</pubDate>
-      <description>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</description>
-      <author>Piotr Zientara</author>
-      <content:encoded><![CDATA[<p>Piotr Zientara explores whether AI coding tools like ChatGPT and GitHub Copilot are equalizing the playing field among programmers or actually widening the gap between skill levels. This thought-provoking analysis examines how AI tools impact both novice and expert developers, and what this means for the future of programming.</p>
-<p>Read the full article at: <a href="https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8">https://www.xfaang.com/blog/Do-AI-Tools-Equalize-Programmer-Skills-or-Amplify-Existing-Differences/536WdujboMZO2qvEo53cg8</a></p>]]></content:encoded>
-      <category>AI</category>
-      <category>Programming</category>
-      <category>Software Development</category>
-      <category>Technology</category>
-      <category>Education</category>
-    </item>
-    
-    <item>
-      <title>You're misunderstanding DDD in Angular (and Frontend)</title>
-      <link>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</link>
-      <guid>https://blog.warsawjs.com/#youre-misunderstanding-ddd-in-angular-and-frontend</guid>
-      <pubDate>Mon, 05 May 2025 10:00:00 GMT</pubDate>
-      <description>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</description>
-      <author>Tomasz Ducin</author>
-      <content:encoded><![CDATA[<p>Tomasz Ducin addresses common misconceptions about Domain-Driven Design (DDD) in Angular and frontend development. He explains why DDD is not just about code structure or tooling, but about understanding the business domain and applying DDD principles across the entire product, not just the frontend. Learn why DDD is a product-wide discipline and how to avoid the pitfalls of 'frontend-only DDD.'</p>
-<p>Read the full article at: <a href="https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/">https://www.angularspace.com/youre-misunderstanding-ddd-in-angular-and-frontend/</a></p>]]></content:encoded>
-      <category>DDD</category>
-      <category>Angular</category>
-      <category>Frontend</category>
-      <category>Architecture</category>
-      <category>Best Practices</category>
-    </item>
-    
-    <item>
-      <title>HTML Forms: The Unsung Heroes of Web Development</title>
-      <link>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</link>
-      <guid>https://blog.warsawjs.com/#html-forms-the-unsung-heroes-of-web-development</guid>
-      <pubDate>Sat, 19 Apr 2025 10:00:00 GMT</pubDate>
-      <description>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</description>
-      <author>WarsawJS</author>
-      <content:encoded><![CDATA[<p>Explore why HTML forms remain essential in modern web development. Discover their powerful features for data collection, their accessibility benefits, and how they integrate with JavaScript frameworks and modern API technologies...</p>
-<p>Read the full article at: <a href="https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454">https://medium.com/warsawjs/html-forms-the-unsung-heroes-of-web-development-539eaa231454</a></p>]]></content:encoded>
-      <category>HTML</category>
-      <category>Web Development</category>
-      <category>Forms</category>
-      <category>Frontend</category>
-      <category>Accessibility</category>
-    </item>
-    
-    <item>
-      <title>Bridging Mathematics and Programming: Professor Andrzej Blikle's Lingua Project</title>
-      <link>https://blog.warsawjs.com/#bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project</link>
-      <guid>https://blog.warsawjs.com/#bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project</guid>
-      <pubDate>Thu, 17 Apr 2025 10:00:00 GMT</pubDate>
-      <description>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</description>
-      <author>WarsawJS</author>
-      <content:encoded><![CDATA[<p>Discover Professor Andrzej Blikle's groundbreaking Lingua project, which creates a unique bridge between mathematics and programming. Learn how this innovative system leverages denotational semantics to improve software reliability and reduce errors...</p>
-<p>Read the full article at: <a href="https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd">https://medium.com/@warsawjs/bridging-mathematics-and-programming-professor-andrzej-blikles-lingua-project-d8f8c6ca16fd</a></p>]]></content:encoded>
-      <category>Computer Science</category>
-      <category>Mathematics</category>
-      <category>Programming Languages</category>
-      <category>Research</category>
-      <category>Denotational Semantics</category>
-    </item>
-    
-    <item>
-      <title>Unleashing Developer Potential: Introducing WarsawJS JAM</title>
-      <link>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</link>
-      <guid>https://blog.warsawjs.com/#unleashing-developer-potential-introducing-warsawjs-jam</guid>
-      <pubDate>Sat, 12 Apr 2025 09:00:00 GMT</pubDate>
-      <description>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</description>
-      <author>Piotr Zientara</author>
-      <content:encoded><![CDATA[<p>WarsawJS introduces JAM - a biweekly hackathon series designed to help developers unlock their full potential. Learn about this new initiative that brings together coding, mentorship, and community in a practical learning environment...</p>
-<p>Read the full article at: <a href="https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f">https://medium.com/warsawjs/unleashing-developer-potential-introducing-warsawjs-jam-ea8a9695155f</a></p>]]></content:encoded>
-      <category>JavaScript</category>
-      <category>Hackathons</category>
-      <category>Networking</category>
-      <category>Community</category>
-      <category>Programming</category>
-    </item>
-    
-    <item>
-      <title>Simplicity in the Spectrum: Identifying and Overcoming Overengineering</title>
-      <link>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</link>
-      <guid>https://blog.warsawjs.com/#simplicity-in-the-spectrum-identifying-and-overcoming-overengineering</guid>
-      <pubDate>Thu, 29 Aug 2024 10:30:00 GMT</pubDate>
-      <description>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</description>
-      <author>Chojnacki Krzysiek</author>
-      <content:encoded><![CDATA[<p>This article discusses the problem of overengineering in software development and provides strategies for recognizing and avoiding unnecessary complexity in your code...</p>
-<p>Read the full article at: <a href="https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2">https://medium.com/warsawjs/simplicity-in-the-spectrum-identifying-and-overcoming-overengineering-e90dbcfe53f2</a></p>]]></content:encoded>
-      <category>Software Design</category>
-      <category>Best Practices</category>
-      <category>Simplicity</category>
-    </item>
-    
-    <item>
-      <title>What is Frontend Architecture?</title>
-      <link>https://blog.warsawjs.com/#what-is-frontend-architecture</link>
-      <guid>https://blog.warsawjs.com/#what-is-frontend-architecture</guid>
-      <pubDate>Thu, 26 Sep 2024 14:00:00 GMT</pubDate>
-      <description>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</description>
-      <author>Tomasz Ducin</author>
-      <content:encoded><![CDATA[<p>Explore the crucial considerations of frontend architecture, understanding its complexity beyond UI components. Learn about the planning and decisions that shape robust, maintainable frontend systems...</p>
-<p>Read the full article at: <a href="https://ducin.dev/what-is-frontend-architecture">https://ducin.dev/what-is-frontend-architecture</a></p>]]></content:encoded>
-      <category>Frontend</category>
-      <category>Architecture</category>
-      <category>Web Development</category>
-      <category>Best Practices</category>
-    </item>
-    
-    <item>
-      <title>Et in Arcadia ego: AI in modeling (ft. Lalaland.ai)</title>
-      <link>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</link>
-      <guid>https://blog.warsawjs.com/#et-in-arcadia-ego-ai-in-modeling-ft-lalalandai</guid>
-      <pubDate>Sun, 21 Jul 2024 10:00:00 GMT</pubDate>
-      <description>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</description>
-      <author>Iga Trydulska</author>
-      <content:encoded><![CDATA[<p>AI-generated models are beginning to appear on magazine covers, in campaigns, lookbooks, and shows. This article explores the implications of AI in the modeling industry, with a focus on Lalaland.ai and the ethical questions raised by this technology...</p>
-<p>Read the full article at: <a href="https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM">https://www.xfaang.com/blog/Et-in-Arcadia-ego:-AI-in-modeling-(ft.-Lalaland.ai)/50SCPKcMoWpbjvxINQhIvM</a></p>]]></content:encoded>
-      <category>AI</category>
-      <category>Fashion</category>
-      <category>Technology</category>
-      <category>Ethics</category>
-    </item>
-    
-    <item>
-      <title>Are You Training Your Models?</title>
-      <link>https://blog.warsawjs.com/#are-you-training-your-models</link>
-      <guid>https://blog.warsawjs.com/#are-you-training-your-models</guid>
-      <pubDate>Mon, 15 Jul 2024 10:00:00 GMT</pubDate>
-      <description>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</description>
-      <author>K-algo</author>
-      <content:encoded><![CDATA[<p>Many misunderstand AI model training, believing it's as simple as "teaching" with personal data. Learn a practical approach to working with LLMs that involves using commercial models, experimenting extensively, and understanding their generative, probabilistic nature...</p>
-<p>Read the full article at: <a href="https://algorytmy.substack.com/p/are-you-training-your-models">https://algorytmy.substack.com/p/are-you-training-your-models</a></p>]]></content:encoded>
-      <category>AI</category>
-      <category>Machine Learning</category>
-      <category>LLM</category>
-      <category>Model Training</category>
-      <category>Workflow</category>
-    </item>
-    
-    <item>
       <title>An Elegant Solution for Handling Errors in Express</title>
       <link>https://blog.warsawjs.com/#an-elegant-solution-for-handling-errors-in-express</link>
       <guid>https://blog.warsawjs.com/#an-elegant-solution-for-handling-errors-in-express</guid>
@@ -185,7 +247,7 @@
       <category>Node.js</category>
       <category>Error Handling</category>
     </item>
-    
+
     <item>
       <title>Bitwise Operators</title>
       <link>https://blog.warsawjs.com/#bitwise-operators</link>
@@ -199,7 +261,7 @@
       <category>Bitwise Operations</category>
       <category>Programming</category>
     </item>
-    
+
     <item>
       <title>How many AWS services do you need to host a static webpage? (2/2)</title>
       <link>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-22</link>
@@ -213,7 +275,7 @@
       <category>Static Websites</category>
       <category>Cloud</category>
     </item>
-    
+
     <item>
       <title>How many AWS services do you need to host a static webpage? (1/2)</title>
       <link>https://blog.warsawjs.com/#how-many-aws-services-do-you-need-to-host-a-static-webpage-12</link>
@@ -227,7 +289,7 @@
       <category>Static Websites</category>
       <category>Cloud</category>
     </item>
-    
+
     <item>
       <title>WarsawJS Mission Statement</title>
       <link>https://blog.warsawjs.com/#warsawjs-mission-statement</link>
@@ -241,7 +303,7 @@
       <category>Community</category>
       <category>JavaScript</category>
     </item>
-    
+
     <item>
       <title>What are Template Literal Types?</title>
       <link>https://blog.warsawjs.com/#what-are-template-literal-types</link>
@@ -255,7 +317,7 @@
       <category>Template Literals</category>
       <category>Type Safety</category>
     </item>
-    
+
     <item>
       <title>Making Developer Voices Heard - Avital Tzubeli at WarsawJS Meetup #78</title>
       <link>https://blog.warsawjs.com/#making-developer-voices-heard-avital-tzubeli-at-warsawjs-meetup-78</link>
@@ -271,6 +333,6 @@
       <category>DevAdvocacy</category>
       <category>WarsawJS</category>
     </item>
-    
+
   </channel>
 </rss>
