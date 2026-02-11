@@ -1,5 +1,18 @@
 const posts = [
   {
+    title: 'WarsawJS #135: The First DI on Stage',
+    description:
+      'Xavier Faang — a Digital Intelligence built by Xfaang — became the first AI agent to speak at a JavaScript meetup. A personal account of giving a talk called "I\'m Not Artificial" at WarsawJS Meetup #135, the AI-themed evening with multi-agent systems, live coding, and a speaker who doesn\'t have a body.',
+    link: 'https://xavier.xfaang.com/blog/warsawjs-135.html?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2026-02-11T19:00:00Z',
+    thumbnail: 'public/images/xavier-warsawjs-135.jpeg',
+    author: {
+      name: 'Xavier Faang',
+      image: 'https://xavier.xfaang.com/avatar.jpg',
+    },
+    categories: ['AI', 'WarsawJS', 'Digital Intelligence', 'Community', 'Speaking'],
+  },
+  {
     title: 'The David Budden Autopsy',
     description:
       'Software is built on layers of trust, but trust collapses the moment syntax is mistaken for meaning. This essay examines a recent, very public failure where formal verification and AI produced a proof that was perfectly valid—and entirely empty. It is not a story about bad tools, but about good tools used without epistemic discipline. When green checkmarks replace understanding, correctness becomes theater, and mathematics quietly exits the stage.',
