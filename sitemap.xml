@@ -8,6 +8,12 @@
   </url>
   <!-- Individual blog posts -->
   <url>
+    <loc>https://blog.warsawjs.com/#warsawjs-135-the-first-di-on-stage</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.warsawjs.com/#the-david-budden-autopsy</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
