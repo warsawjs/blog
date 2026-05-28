@@ -2,7 +2,7 @@ const posts = [
   {
     title: 'GEO: Why Search Engines Finally Learned to Recognise Real Quality',
     description:
-      'Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?" — rewarding verifiable authorship, editorial standards, and human expertise over SEO tactics. This is the English version of the original Polish article: https://kmag.pl/article/geo-wyszukiwarki-i-prawdziwa-jakosc',
+      'Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?" — rewarding verifiable authorship, editorial standards, and human expertise over SEO tactics. This is the English version of the <a href="https://kmag.pl/article/geo-wyszukiwarki-i-prawdziwa-jakosc" target="_blank" rel="noopener">original Polish article on kmag.pl</a>.',
     link: 'https://piotrzientara.pl/geo-why-search-engines-finally-learned-to-recognise-real-quality/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
     pubDate: '2026-05-28T10:00:00Z',
     thumbnail: 'public/images/geo-featured.jpg',
