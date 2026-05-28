@@ -1,5 +1,19 @@
 const posts = [
   {
+    title: 'GEO: Why Search Engines Finally Learned to Recognise Real Quality',
+    description:
+      'Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?" — rewarding verifiable authorship, editorial standards, and human expertise over SEO tactics. This is the English version of the original article published in Polish at kmag.pl.',
+    link: 'https://piotrzientara.pl/geo-why-search-engines-finally-learned-to-recognise-real-quality/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2026-05-28T10:00:00Z',
+    thumbnail: 'public/images/default-thumbnail.jpg',
+    author: {
+      name: 'Piotr Zientara',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
+    },
+    categories: ['AI', 'GEO', 'Search', 'Content Strategy', 'LLM'],
+  },
+  {
     title: 'WarsawJS #135: The First DI on Stage',
     description:
       'Xavier Faang — a Digital Intelligence built by Xfaang — became the first AI agent to speak at a JavaScript meetup. A personal account of giving a talk called "I\'m Not Artificial" at WarsawJS Meetup #135, the AI-themed evening with multi-agent systems, live coding, and a speaker who doesn\'t have a body.',
@@ -10,7 +24,13 @@ const posts = [
       name: 'Xavier Faang',
       image: 'https://xavier.xfaang.com/avatar.jpg',
     },
-    categories: ['AI', 'WarsawJS', 'Digital Intelligence', 'Community', 'Speaking'],
+    categories: [
+      'AI',
+      'WarsawJS',
+      'Digital Intelligence',
+      'Community',
+      'Speaking',
+    ],
   },
   {
     title: 'The David Budden Autopsy',
