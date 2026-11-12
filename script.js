@@ -1,5 +1,20 @@
 const posts = [
   {
+    title:
+      'Why Should We Care About GEO and E-E-A-T? Visibility Lessons from K MAG',
+    description:
+      'The written version of Piotr Zientara\'s talk at WarsawJS Meetup #144: how AI answers pick their sources, what GEO, AEO and E-E-A-T mean in practice, what grew at K MAG, and a checklist for developers. Slides: <a href="https://cdn.warsawjs.com/warsawjs-144-2026-11-11-geo-eeat/index.html" target="_blank" rel="noopener">WarsawJS #144 deck</a>.',
+    link: 'https://piotrzientara.pl/geo-eeat-visibility-lessons-k-mag/?utm_source=blog.warsawjs.com&utm_medium=referral&utm_campaign=warsawjs_blog',
+    pubDate: '2026-11-12T18:00:00Z',
+    thumbnail: 'public/images/geo-eeat-warsawjs-144.jpg',
+    author: {
+      name: 'Piotr Zientara',
+      image:
+        'https://s3.eu-central-1.amazonaws.com/www.warsawjs.com/static/images/people/piotr-zientara.jpg',
+    },
+    categories: ['GEO', 'AEO', 'SEO', 'AI', 'WarsawJS'],
+  },
+  {
     title: 'GEO: Why Search Engines Finally Learned to Recognise Real Quality',
     description:
       'Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?" — rewarding verifiable authorship, editorial standards, and human expertise over SEO tactics. This is the English version of the <a href="https://kmag.pl/article/geo-wyszukiwarki-i-prawdziwa-jakosc" target="_blank" rel="noopener">original Polish article on kmag.pl</a>.',
