@@ -5,7 +5,7 @@
     <link>https://blog.warsawjs.com/</link>
     <description>Discover JavaScript tutorials, technical articles, and expert insights from the WarsawJS community. Topics include React, Node.js, TypeScript, and modern web development.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Feb 2026 19:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 18:00:00 GMT</lastBuildDate>
     <atom:link href="https://blog.warsawjs.com/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://blog.warsawjs.com/public/images/og-image-desktop.jpeg</url>
@@ -15,6 +15,39 @@
       <width>144</width>
       <height>144</height>
     </image>
+
+    <item>
+      <title>Why Should We Care About GEO and E-E-A-T? Visibility Lessons from K MAG</title>
+      <link>https://blog.warsawjs.com/#why-should-we-care-about-geo-and-e-e-a-t-visibility-lessons-from-k-mag</link>
+      <guid>https://blog.warsawjs.com/#why-should-we-care-about-geo-and-e-e-a-t-visibility-lessons-from-k-mag</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 GMT</pubDate>
+      <description>The written version of Piotr Zientara's talk at WarsawJS Meetup #144: how AI answers pick their sources, what GEO, AEO and E-E-A-T mean in practice, what grew at K MAG, and a checklist for developers.</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>The written version of Piotr Zientara's talk at WarsawJS Meetup #144: how AI answers pick their sources, what GEO, AEO and E-E-A-T mean in practice, what grew at K MAG, and a checklist for developers.</p>
+<p>Slides: <a href="https://cdn.warsawjs.com/warsawjs-144-2026-11-11-geo-eeat/index.html">WarsawJS #144 deck</a></p>
+<p>Read the full article at: <a href="https://piotrzientara.pl/geo-eeat-visibility-lessons-k-mag/">https://piotrzientara.pl/geo-eeat-visibility-lessons-k-mag/</a></p>]]></content:encoded>
+      <category>GEO</category>
+      <category>AEO</category>
+      <category>SEO</category>
+      <category>AI</category>
+      <category>WarsawJS</category>
+    </item>
+
+    <item>
+      <title>GEO: Why Search Engines Finally Learned to Recognise Real Quality</title>
+      <link>https://blog.warsawjs.com/#geo-why-search-engines-finally-learned-to-recognise-real-quality</link>
+      <guid>https://blog.warsawjs.com/#geo-why-search-engines-finally-learned-to-recognise-real-quality</guid>
+      <pubDate>Thu, 28 May 2026 10:00:00 GMT</pubDate>
+      <description>Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?", rewarding verifiable authorship, editorial standards and human expertise over SEO tactics. English version of the original Polish article on kmag.pl.</description>
+      <author>Piotr Zientara</author>
+      <content:encoded><![CDATA[<p>Piotr Zientara argues that generative search engines have flipped the question from "which popular page contains this keyword?" to "who actually understands this topic?", rewarding verifiable authorship, editorial standards and human expertise over SEO tactics. English version of the original Polish article on kmag.pl.</p>
+<p>Read the full article at: <a href="https://piotrzientara.pl/geo-why-search-engines-finally-learned-to-recognise-real-quality/">https://piotrzientara.pl/geo-why-search-engines-finally-learned-to-recognise-real-quality/</a></p>]]></content:encoded>
+      <category>AI</category>
+      <category>GEO</category>
+      <category>Search</category>
+      <category>Content Strategy</category>
+      <category>LLM</category>
+    </item>
 
     <item>
       <title>WarsawJS #135: The First DI on Stage</title>
